@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sparxastronomy</title>
     <meta name="description" content="Personal portfolio home page">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <script src="script.js" defer></script>
 </head>
 
@@ -34,20 +37,83 @@
         <img src="/media/cover_photo/welcome1.jpg"> </img>
         <div class="welcome-quote">
             <p>The Universe is under no obligation to make sense to you</p>
-            <p style="font-size:30px">-Neil deGrasse Tyson</p>
+            <p>-Neil deGrasse Tyson</p>
         </div>
     </section>
 
     <section class='home' id='home'>
         <h1>This page is still under Development</h1>
-        <div class='home-content'>
-            <p>Hello there, welcome to my page. I'm a second year undergraduate at IISER-Kolkata with interest of majoring in physics. Here I post about my reserach and my previous research experiences.</p>
+        <div class='boxed-content'>
+            <p>Hello there, I'm Bipradeep welcome to my page. I'm a second year undergraduate at IISER-Kolkata with interest of majoring in physics. Here I post about my reserach and my previous research experiences.</p>
+            <p>So, welcome-aborad on a jouurny with me to explore the cosmos</p>
         </div>
+
+        <!-- currently working card -->
+        <h1>Currently Working</h1>
         <div class="home-blocks">
-            <h1>Home Blocks</h1>
-            <p>content</p>
+            <div class="block-image">
+                <!-- <img src="/media/currently_working/cover.jpg" alt="N132D cover photo"> -->
+                <img src="/media/currently_working/casA_cover.jpg" alt="N132D_spectrum">
+            </div>
+            <div class="block-info">
+                <ul>
+                    <li>
+                        <p>Currently I’m working on N132D SNR. I’m using data from Chandra X-ray observatory and Hubble Space Telescope to create elemental distribution map and working on reproducing previous results and testing new models.</p>
+                    </li>
+                    <li>
+                        <p>I'm also working on Multiwavelength compositon of Cas-A SNR, using Chnadra and Hubble data, with goal to further create an expansion animation to demostrate the evolution of SNR over time. </p>
+                    </li>
+                    <li>
+                        <p>I'm also working on understanding SNR <em>DEM L71</em>, which an Iron-rich SNR, using Chandra  and Hubble data. </p>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </section>
+
+    <!-- footer calling -->
+    <div footer="/assets/footer.html"></div>
+
+    <!-- footer design -->
+    <footer>
+        <div class="container">
+            <div class="sec about-me">
+                <h2>About Me</h2>
+                <p>
+                    Bipradeep Saha is a second year undergraduate at IISER-Kolkata. His interest lies in Astronomy, Cosmology and using Machine learing in Astronomy. Apart from this he is a photographer with interst in abstract and naturat arts.
+                </p>
+                <div class="social-container">
+                    <ul class="sci">
+                        <li><a target="_blank" href="https://github.com/sparxastronomy/"><i class="fa fa-github"></i></a></li>
+                        <li><a target="_blank" href="https://twitter.com/bipradeep_saha"><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="https://linkedin.com/in/bipradeep-saha/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/sparxastronomy/"><i class="fa fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/Picimperfect"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCC5OLBC_a7Ke0LPl7WgTJQg"><i class="fa fa-youtube-play"></i></a></li>
+                    </ul>
+                </div>
+            </div>         
+            <div class="sec contact">
+                <h2>Conact Me</h2>
+                <p>Fastest way to reach me is through Email or Linkedein</p>
+                <ul class="info">
+                    <li>
+                        <p><a href="mailto:bs19ms135@iiserkol.ac.in"><i class="fa fa-envelope" aria-hidden="true"> </i> bs19ms135@iiserkol.ac.in</a></p>
+                    </li>
+                    <li>
+                        <p><a href="mailto:bipradeepsaha04@gmail.com"><i class="fa fa-envelope" aria-hidden="true"> </i> bipradeepsaha04@gmail.com</a> </p>
+                    </li>
+                    <li>
+                        <p><a href="tel:+917303544269"><i class="fa fa-phone" aria-hidden="true"> </i> +91 7303544269</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> New Delhi, Delhi, India</p>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
 
 </body>
 </html>
