@@ -7,7 +7,7 @@ footer {
   height: auto;
   padding: 50px 100px;
   margin-bottom: 0;
-  background-color: #24262b;
+  background-color: #26282e;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -45,6 +45,7 @@ footer h2:before {
 }
 
 footer p {
+  color: white;
   font-size: 19px;
   text-align: justify;
 }
@@ -114,6 +115,9 @@ footer h2:before {
   margin-top: 3px;
   text-align: center;
 }
+.info li fa {
+  color: white;
+}
 .info p {
   font-size: 18px;
   font-weight: 100;
@@ -121,8 +125,8 @@ footer h2:before {
 .info li a {
   width: auto;
   text-decoration: none;
-  color: white;
   display: inline-block;
+  color: white;
   background-color: rgb(20, 19, 19);
   flex-direction: row;
   padding: 0.5rem;

@@ -1,13 +1,23 @@
+:root {
+  --text: black;
+  --bkg: rgba(240, 240, 240, 0.945);
+  --card-bkg: white;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
+
 body {
-  background-color: rgba(240, 240, 240, 0.945);
+  color: var(--text);
+  background: var(--bkg);
 }
 
 /* navbar styling */
@@ -35,10 +45,19 @@ body {
   width: 320px;
 }
 
+#icon {
+  margin: -0.6rem 0.6rem;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
 .navbar-links ul {
-  margin: 0;
+  margin: auto;
   padding: 0;
   display: flex;
+  flex: 1;
+  text-align: right;
 }
 .navbar-links li {
   list-style: none;
@@ -88,7 +107,7 @@ body {
   }
 
   .navbar-links ul {
-    width: 100%;
+    width: 50%;
     flex-direction: column;
   }
 
@@ -99,6 +118,15 @@ body {
   .navbar-links li a {
     display: block;
     padding: 0.5rem 1rem;
+    width: 40%;
+    margin: auto;
+  }
+
+  #icon {
+    margin: auto;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
   }
 
   .navbar-links.active {

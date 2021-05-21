@@ -8,3 +8,15 @@ toggleButton.addEventListener('click', () => {
     navbar.classList.toggle('active')
     quote.classList.toggle('active')
 }) 
+
+// dark mode toggle
+var icon = document.getElementById("icon")
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "/media/icons/sun.png"
+    }
+    else {
+        icon.src = "/media/icons/moon.png"
+    }
+}
