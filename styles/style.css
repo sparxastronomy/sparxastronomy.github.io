@@ -124,6 +124,7 @@ body {
 
   #icon {
     margin: auto;
+    margin-top: 2px;
     width: 30px;
     height: auto;
     cursor: pointer;

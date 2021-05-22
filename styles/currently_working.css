@@ -43,7 +43,9 @@
 }
 .overview {
   margin: 0;
-  padding: 0rem 10rem;
+  /* padding: 0rem 10rem; */
+  width: 80%;
+  margin: auto;
   text-align: justify;
 }
 .overview p {
@@ -52,8 +54,9 @@
 }
 
 .content-info {
-  margin: 1rem;
-  padding: 5px 10rem;
+  margin: auto;
+  padding: 5px 0rem;
+  width: 75%;
   text-align: center;
   align-items: center;
 }
@@ -67,4 +70,28 @@
 .content-info a {
   text-decoration: underline;
   color: var(--text);
+}
+
+@media (max-width: 1000px) {
+  .content {
+    max-width: 90%;
+  }
+  .lines {
+    max-width: 95%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .overview {
+    width: 80%;
+  }
+  .overview p {
+    font-size: 24px;
+  }
+  .content-info {
+    padding: 4px 0rem;
+    width: 80%;
+  }
+  .content-info p {
+    font-size: 21px;
+  }
 }
