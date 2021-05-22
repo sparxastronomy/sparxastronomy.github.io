@@ -59,6 +59,12 @@
   color: rgb(255, 146, 43);
   font-family: "Varela Round", sans-serif;
 }
+.home h2 {
+  font-size: 27px;
+  color: var(--text);
+  font-weight: bold;
+}
+
 .home p {
   color: var(--text);
   font-size: 20px;
@@ -70,7 +76,8 @@
   display: block;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  max-width: 70%;
+  width: auto;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -89,7 +96,7 @@
   font-style: italic;
 }
 
-.home-blocks {
+.blocks {
   width: auto;
   max-width: 80%;
   max-height: 500px;

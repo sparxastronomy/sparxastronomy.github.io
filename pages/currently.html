@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sparxastronomy</title>
-    <meta name="description" content="Personal portfolio home page">
+    <meta name="description" content="Personal portfolio: Details of current projects">
+    <link rel="shortcut icon" href="/media/logo/favicon.png" type="image/png">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/currently_working.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
-    <script src="/script.js"></script>
+    <script src="/js/script.js" defer></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
 </head>
 
 <body>
@@ -33,11 +36,49 @@
             </ul>       
         </div>
     </nav>
-    <home>
-        <h1>
-            This Page is  still under devlopment: Currently Working
-        </h1>
-    </home>
+    
+
+    <!-- Welome banner -->
+    <div class="welcome">
+        <img src="/media/cover_photo/welcome1.jpg"> </img>
+    </div>
+
+    <!-- Currently working-->
+    <section class='home' id='currently'>
+        <h1>This Page is under devlopment</h1>
+        <div class="boxed-content">
+            <p>Welcome to my currently-working page. Here the contents are about the pojects that I'm presently working on.</p>
+        </div>
+
+        
+        <div class="content">
+            <h1>DEM L71 (<em>SNR J0505.7-6752</em>)</h1>
+            <!-- overview -->
+            <span class="lines"></span>
+            <div class="overview">
+                <p>
+                    DEM L71 is an interesting target in the Large Magellanic Cloud  which a small companion galaxy of the Milky Way located 170,000 light-years away.
+                </p>
+            </div>
+            <span class="lines"></span>
+
+            <div class="content-info">
+                <h2>Overview</h2>
+                <p>
+                     DEM L71 is a Type-1a Supernova(SN) which is a rich Iron(Fe). Proof of Hydrogen were also found as H-$\alpha$ emission were observed. Type-1a SNs are very essential in Astronomy as they act as the standard candles. Being rich in Iron and a Type-1a SN, its most likely that this SNR is due to death of a White-Dwarf star.
+                </p>
+                <p>
+                    For this study, I'm using optical data from WFC3 instrument onboard HST (<b>Propsoal ID: <a href="https://archive.stsci.edu/proposal_search.php?mission=hst&id=13282" target="_blank">1328</a> , PI: You-Hua Chu</b>) and X-ray Data from ACIS instrument of Chandra X-ray Observatory(CXO) (<b>Obs ID: 775, 3867, 4440</b>).
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
     <!-- footer design -->
     <footer>
         <div class="container">
@@ -77,7 +118,18 @@
             </div> 
         </div>
     </footer>
+    
 
-
+    <!-- inline math -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
 </body>
 </html>
