@@ -71,6 +71,22 @@
   text-decoration: underline;
   color: var(--text);
 }
+.content-image {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+.multiples {
+  margin: auto;
+  width: 95%;
+}
+.multiples img {
+  margin: auto;
+  max-width: 50%;
+  max-height: 500px;
+}
 
 @media (max-width: 1000px) {
   .content {
@@ -93,5 +109,15 @@
   }
   .content-info p {
     font-size: 21px;
+  }
+}
+
+@media (max-width: 800px) {
+  .content-image {
+    flex-direction: column;
+  }
+  .multiples img {
+    width: 95%;
+    max-width: 95%;
   }
 }

@@ -31,15 +31,13 @@
 }
 
 .welcome-quote {
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-weight: 200;
   font-size: 30px;
+  padding: 80px 10px;
   text-align: center;
   justify-content: center;
   font-family: "Dancing Script", cursive;
+  background-image: url(/media/cover_photo/welcome1.jpg);
 }
 .welcome-quote p {
   color: white;
@@ -64,6 +62,11 @@
   color: var(--text);
   font-weight: bold;
 }
+.home h3 {
+  font-size: 22px;
+  color: rgb(252, 120, 175);
+  font-weight: 400;
+}
 
 .home p {
   color: var(--text);
@@ -76,7 +79,7 @@
   display: block;
   display: flex;
   flex-direction: column;
-  max-width: 70%;
+  max-width: 90%;
   width: auto;
   margin: auto;
   margin-top: 20px;
@@ -177,8 +180,11 @@
 }
 
 @media (max-width: 900px) {
+  .home h1 {
+    font-size: 23px;
+  }
   .welcome-quote {
-    font-size: 24px;
+    font-size: 22px;
   }
   .boxed-content p {
     font-size: 19px;

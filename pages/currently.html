@@ -40,7 +40,9 @@
 
     <!-- Welome banner -->
     <div class="welcome">
-        <img src="/media/cover_photo/welcome1.jpg"> </img>
+        <div class="welcome-quote">
+            <p><br></p>
+        </div>
     </div>
 
     <!-- Currently working-->
@@ -73,6 +75,25 @@
                 <p>
                     My main goal of the study is to create elemental distribution and analyze the spectrum of the target to verify previous results. Also, I’m learning about astrophysical radiative processes, so I’ll be testing new models for understanding the plasma phenomena at SNRs. 
                 </p>
+                <h3>Basic Data Reduction Steps</h3>
+                <p>
+                    The data from the ACIS instrument has been reduced using CIAO as per the standard procedure. For the HST data, I used Four filters: F450W, F555W, F656N and F814W. I used the pipeline reduced data for F656N filter but used multiple raw observation for other filter and combined them to create a master observation, following  <a href="https://github.com/spacetelescope/notebooks" target="_blank">STScI drizzlepac tutorial</a>. 
+                </p>
+                <h3>X-ray Data Analysis</h3>
+                <p>
+                    I first split the data based on the energy distribution in various channel (Hard: 1.2-6 keV, Medium: 0.7-1.2 keV, and Soft: 0.1-0.7 keV) and the plotted them to check for relative contribution. [<b>NOTE : </b> that, I’ve combined observation from all the above mentioned observations.]
+                </p>
+            </div>
+            <div class="content-image multiples">
+                <img src="/media/currently_working/DEM_L71/rgb.png" alt="">
+                <img src="/media/currently_working/DEM_L71/rgb_smooth.png" alt="c_smooth">
+            </div>
+            <div class="content-info">
+                <p>
+                    The above images are X-ray RGB images of the SNR. The first image is the un-smoothed image and in the second image each of the channel is smoothed using a <a href="https://cxc.cfa.harvard.edu/ciao/ahelp/csmooth.html" target="_blank"> gaussian kernel</a> ($\sigma_{min}$=3, $\sigma_{max}$=4).
+                    <br>
+                    In both the imgaes, one can clearly observe the double shock morphologies, and infact this is a text-book example of double shocks in SNR.
+                </p>
             </div>
         </div>
 
@@ -88,7 +109,7 @@
             <div class="sec about-me">
                 <h2>About Me</h2>
                 <p>
-                    Bipradeep Saha is a second year undergraduate at IISER-Kolkata. His interest lies in Astronomy, Cosmology and using Machine learing in Astronomy. Apart from this he is a photographer with interst in abstract and naturat arts.
+                    Bipradeep Saha is a second year undergraduate at IISER-Kolkata. His interest lies in Astronomy, Cosmology and using Machine learning in Astronomy. Apart from this he is a photographer with interests in abstract and naturat arts.
                 </p>
                 <div class="social-container">
                     <ul class="sci">
@@ -103,7 +124,7 @@
             </div>         
             <div class="sec contact">
                 <h2>Conact Me</h2>
-                <p>Fastest way to reach me is through Email or Linkedein</p>
+                <p>Fastest way to reach me is through Email or Linkedin</p>
                 <ul class="info">
                     <li>
                         <p><a href="mailto:bs19ms135@iiserkol.ac.in"><i class="fa fa-envelope" aria-hidden="true"> </i> bs19ms135@iiserkol.ac.in</a></p>
@@ -121,6 +142,7 @@
             </div> 
         </div>
     </footer>
+
     
 
     <!-- inline math -->
