@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --text: black;
   --bkg: rgba(240, 240, 240, 0.945);
   --card-bkg: white;
@@ -9,7 +9,7 @@
   --bkg: #121212;
   --card-bkg: rgb(39, 39, 39);
   --shadow: rgb(0, 0, 0);
-}
+} */
 
 /* Home page styling */
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
@@ -84,8 +84,10 @@
 }
 .multiples img {
   margin: auto;
+  width: auto;
   max-width: 50%;
   max-height: 500px;
+  padding: 2px;
 }
 
 @media (max-width: 1000px) {
@@ -117,7 +119,7 @@
     flex-direction: column;
   }
   .multiples img {
-    width: 95%;
+    width: auto;
     max-width: 95%;
   }
 }

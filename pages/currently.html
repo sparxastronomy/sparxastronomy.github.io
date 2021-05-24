@@ -16,7 +16,7 @@
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
 </head>
 
-<body>
+<body onload = "onload()">
     
     <nav class="navbar">
         <div class="logo"><a href="/index.html"><img src="/media/logo/sparxastronomy.png" class="responsive-logo"></img> </a></div>
@@ -85,16 +85,29 @@
                 </p>
             </div>
             <div class="content-image multiples">
-                <img src="/media/currently_working/DEM_L71/rgb.png" alt="">
+                <img src="/media/currently_working/DEM_L71/rgb.png" alt="Xray Image">
                 <img src="/media/currently_working/DEM_L71/rgb_smooth.png" alt="c_smooth">
             </div>
             <div class="content-info">
                 <p>
                     The above images are X-ray RGB images of the SNR. The first image is the un-smoothed image and in the second image each of the channel is smoothed using a <a href="https://cxc.cfa.harvard.edu/ciao/ahelp/csmooth.html" target="_blank"> gaussian kernel</a> ($\sigma_{min}$=3, $\sigma_{max}$=4).
+                </p>
+                <p>
+                    In both the imgaes, one can clearly observe the double shock morphologies, and infact this is a text-book example of double shocks in SNR. The supersonic Forward shock(FS) is driven by the explosion. On the either side of the forward shock there is interstellar medium(ISM).  Behind the FS, the shocked ISM keeps accumulating, along with the ejected materials from the star. The freely expanding ejecta pushes on to the shocked ISM, and a contact discontinuity arises due to density difference between the ISM and the ejecta. As a result, the ejecta never reaches the FS, but insted there is a huge pressure build up behind the FS, which drives the Reverse Shock(RS) by pushing back onto the unshocked ejecta. The RS compresses the unshocked ejected heating the remaining ejecta. The heated freely expanding ejecta is seen in aqua-green color here and one can clearly observe the separation between ejecta and the shockwaves.
                     <br>
-                    In both the imgaes, one can clearly observe the double shock morphologies, and infact this is a text-book example of double shocks in SNR.
+                    The below images will help better understand the above scenario. The first image is the x-ray image enhanced for better feature identification, and the next image is the x-ray image overlaid on top of the optical image, which shows the H-$\alpha$ emission observed by HST.
                 </p>
             </div>
+            <div class="content-image multiples">
+                <img src="/media/currently_working/DEM_L71/Xray_crop.jpg" alt="X-ray Image">
+                <img src="/media/currently_working/DEM_L71/XO_crop.jpg" alt="X-ray and Optical Image">
+            </div>
+            <div class="content-info">
+                <p>
+                    Look at the below image for comparison between optical and optical Image with xray data overlaid.
+                </p>
+            </div>
+            <h3>Spectral Analysis</h3>
         </div>
 
     </section>
