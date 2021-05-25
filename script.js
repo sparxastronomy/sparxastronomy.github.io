@@ -37,4 +37,3 @@ icon.onclick = function(){
         localStorage.setItem("theme", "light")
     }
 }
-

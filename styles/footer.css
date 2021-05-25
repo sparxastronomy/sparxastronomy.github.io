@@ -1,7 +1,7 @@
-/* footer */
+/* .footer */
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
-footer {
+.footer {
   position: relative;
   width: 100%;
   height: auto;
@@ -14,27 +14,27 @@ footer {
   font-family: "Varela Round", sans-serif;
 }
 
-footer .container {
+.footer .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-footer .container .sec {
+.footer .container .sec {
   margin-right: 3rem;
   margin-left: 3rem;
 }
-footer .container .sec.about-me {
+.footer .container .sec.about-me {
   margin: auto;
   width: 45%;
 }
-footer .container .sec.about-me h2 {
+.footer .container .sec.about-me h2 {
   position: relative;
   font-size: 25px;
   color: rgb(238, 124, 89);
   font-weight: 600;
   margin-bottom: 15px;
 }
-footer h2:before {
+.footer h2:before {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -44,7 +44,7 @@ footer h2:before {
   background: rgb(17, 118, 250);
 }
 
-footer p {
+.footer p {
   color: white;
   font-size: 19px;
   text-align: justify;
@@ -81,18 +81,18 @@ footer p {
   transform: translate(0, -15px);
   background-color: #e1306c;
 }
-footer .container .sec.contact {
+.footer .container .sec.contact {
   width: 45%;
   margin: auto;
 }
-footer .container .sec.contact h2 {
+.footer .container .sec.contact h2 {
   position: relative;
   font-size: 25px;
   color: rgb(238, 124, 89);
   font-weight: 600;
   margin-bottom: 15px;
 }
-footer h2:before {
+.footer h2:before {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -141,17 +141,17 @@ footer h2:before {
 }
 
 @media (max-width: 920px) {
-  footer {
+  .footer {
     padding: 30px 30px;
   }
-  footer .container {
+  .footer .container {
     flex-direction: column;
   }
-  footer .container .sec.about-me {
+  .footer .container .sec.about-me {
     margin: auto;
     width: 90%;
   }
-  footer .container .sec.contact {
+  .footer .container .sec.contact {
     margin: auto;
     width: 90%;
     margin-top: 5rem;
