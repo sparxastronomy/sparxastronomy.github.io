@@ -71,6 +71,12 @@
   text-decoration: underline;
   color: var(--text);
 }
+.content-info ul {
+  width: 90%;
+  padding: 0 2rem;
+  text-align: left;
+}
+
 .content-image {
   margin: 0;
   display: flex;
@@ -88,6 +94,19 @@
   max-width: 50%;
   max-height: 500px;
   padding: 2px;
+}
+.single {
+  margin: auto;
+  width: auto;
+  max-width: 100%;
+  text-align: center;
+}
+.single img {
+  margin: auto;
+  padding: 2px;
+  height: auto;
+  max-height: 400px;
+  text-align: center;
 }
 
 @media (max-width: 1000px) {

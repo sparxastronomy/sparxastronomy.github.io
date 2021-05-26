@@ -67,6 +67,14 @@
   color: rgb(252, 120, 175);
   font-weight: 400;
 }
+.home h4 {
+  font-size: 20px;
+  color: rgb(15, 80, 50);
+  font-weight: 650;
+  text-decoration: underline;
+  text-align: left;
+  margin: 1rem 0rem;
+}
 
 .home p {
   color: var(--text);
