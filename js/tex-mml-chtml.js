@@ -72,11 +72,19 @@
     
 
   <link rel="assets" href="https://github.githubassets.com/">
+<<<<<<< HEAD
     <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/34098772/ws?session=eyJ2IjoiVjMiLCJ1IjozNDA5ODc3MiwicyI6Njk0NzkxMDQ0LCJjIjozNTQ1MzIyMjAxLCJ0IjoxNjIyMTM2MDczfQ==--8c1ca7e9d29782d0ab3e6a0ff3339e7c5037b79472ea1e35035c06801f93377f" data-refresh-url="/_alive" data-session-id="41b45a56b9751de5c43361e18359a0c09693c8e8c926319fa3c576757a25b407">
     <link rel="shared-web-socket-src" href="/socket-worker-3f088aa2.js">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
   <meta name="request-id" content="CA21:0E84:2DFBE:36A08:60AFD508" data-pjax-transient="true" /><meta name="html-safe-nonce" content="d4ca2017c9206cbcffe1b7c95983a2ab1d4c6cb51690334d6343dd4b5f97ec8d" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9tYXRoamF4L01hdGhKYXgvdHJlZS9tYXN0ZXIvZXM1IiwicmVxdWVzdF9pZCI6IkNBMjE6MEU4NDoyREZCRTozNkEwODo2MEFGRDUwOCIsInZpc2l0b3JfaWQiOiI4NDM4ODk2OTYxOTQwOTM1MzA3IiwicmVnaW9uX2VkZ2UiOiJhcC1zb3V0aC0xIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true" /><meta name="visitor-hmac" content="c03aa8e1d3cbcc6eae4520e94475e12dd9edcfd4644bc50f1ab8e3aacd25b516" data-pjax-transient="true" />
+=======
+    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/34098772/ws?session=eyJ2IjoiVjMiLCJ1IjozNDA5ODc3MiwicyI6Njk0NzkxMDQ0LCJjIjozNDYyODYyMDkzLCJ0IjoxNjIyMTM0NzIxfQ==--e057673625aa7d1eed85d218886c92d65b9d8b06cd15de0729be5f431f097642" data-refresh-url="/_alive" data-session-id="41b45a56b9751de5c43361e18359a0c09693c8e8c926319fa3c576757a25b407">
+    <link rel="shared-web-socket-src" href="/socket-worker-3f088aa2.js">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+  <meta name="request-id" content="C771:0E84:2645E:2D540:60AFCFB7" data-pjax-transient="true" /><meta name="html-safe-nonce" content="d4ca2017c9206cbcffe1b7c95983a2ab1d4c6cb51690334d6343dd4b5f97ec8d" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9tYXRoamF4L01hdGhKYXgvdHJlZS9tYXN0ZXIvZXM1IiwicmVxdWVzdF9pZCI6IkM3NzE6MEU4NDoyNjQ1RToyRDU0MDo2MEFGQ0ZCNyIsInZpc2l0b3JfaWQiOiI4NDM4ODk2OTYxOTQwOTM1MzA3IiwicmVnaW9uX2VkZ2UiOiJhcC1zb3V0aC0xIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true" /><meta name="visitor-hmac" content="e575f5ff526c32724a2ca114c89db5fd4a824843f34a7278a56e2a33777a9fca" data-pjax-transient="true" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
 
     <meta name="hovercard-subject-tag" content="repository:847885" data-pjax-transient>
 
@@ -115,7 +123,11 @@
 
       <meta name="expected-hostname" content="github.com">
 
+<<<<<<< HEAD
       <meta name="js-proxy-site-detection-payload" content="ZmFiMjlhNWYyZmI0ZGExNTRhZTI1YzNiOGRjMDhmOGFkY2Q1NTQ1YjU5NjEwMzBjNGU2NmNkOWVlODgyMDg4MXx7InJlbW90ZV9hZGRyZXNzIjoiMTExLjkxLjIyNi43NCIsInJlcXVlc3RfaWQiOiJDQTIxOjBFODQ6MkRGQkU6MzZBMDg6NjBBRkQ1MDgiLCJ0aW1lc3RhbXAiOjE2MjIxMzYwNzMsImhvc3QiOiJnaXRodWIuY29tIn0=">
+=======
+      <meta name="js-proxy-site-detection-payload" content="ZDE2MDgzNDE2ZWFiNjc1Y2IwYWE3NmNhZmZlOTc1MDJhMThlNTk5ODU5N2JhZjEzNTNmMGE1YWUyM2U2YTQ1MHx7InJlbW90ZV9hZGRyZXNzIjoiMTExLjkxLjIyNi43NCIsInJlcXVlc3RfaWQiOiJDNzcxOjBFODQ6MjY0NUU6MkQ1NDA6NjBBRkNGQjciLCJ0aW1lc3RhbXAiOjE2MjIxMzQ3MjEsImhvc3QiOiJnaXRodWIuY29tIn0=">
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
 
     <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,AUTOCOMPLETE_EMOJIS_IN_MARKDOWN_EDITOR,GITHUB_TOKEN_PERMISSION,ACTIONS_CONCURRENCY_UI">
 
@@ -211,7 +223,11 @@
             spellcheck="false"
             autocomplete="off"
           >
+<<<<<<< HEAD
           <input type="hidden" value="4KUK51R6dbE5vOg9cMN5Re+9tMDfx5NtHLb4xXiWcIpddGK4G6CJ6jfkP0Bk3GqyV6VrYRF4eHtx4OkNEHJQIA==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+=======
+          <input type="hidden" value="UukF+1gt77BLqKwLqpHo3/JzEdBVi4LE3p+2V9uTvPbvOG2kF/cT60Xwe3a+jvsoSmvOcZs0adKzyaefs3ecXA==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -399,7 +415,11 @@
       <img class="avatar avatar-user" src="https://avatars.githubusercontent.com/u/34098772?s=40&amp;v=4" width="20" height="20" alt="@sparxastronomy" />
       sparxastronomy
 </a>
+<<<<<<< HEAD
     <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="iN6o1WZ+DLIRF2hcfPKmN/yu6GIqkeFAwyQOjZQ3D4E1l4K1cVM5/ir9NRvtfu5oABfvHzBrAhD68dvBT58VDQ==" />
+=======
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="0jZfVIQrBQSL05014aP17ATd2b75gmqjgGlKqO50pT9vf3U0kwYwSLA5wHJwL72z+GTew+N4ifO5vJ/kNdy/sw==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
       <button type="submit" class="Header-link mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15 d-md-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"></path></svg>
         Sign out
@@ -423,7 +443,11 @@
       <notification-indicator
         class="js-socket-channel"
         data-test-selector="notifications-indicator"
+<<<<<<< HEAD
         data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MzQwOTg3NzIiLCJ0IjoxNjIyMTM2MDczfQ==--524b6e4b7f8c41a50f769f8cb34ec73f6e0cf440d7018efe3574d16b5e2f6dc8">
+=======
+        data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MzQwOTg3NzIiLCJ0IjoxNjIyMTM0NzIxfQ==--27777253af9121535551e5e9eedd2d9470ca39ea899a356d9f94d5a658840aec">
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
         <a href="/notifications"
           class="Header-link notification-indicator position-relative tooltipped tooltipped-sw"
           
@@ -693,7 +717,11 @@
             </header>
 
             <div class="SelectMenu-list">
+<<<<<<< HEAD
               <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="A+x/cEl9bDROob0+KIETg3AqP76xMG1uviAq1Eh+C4Li9h9xnUiQ0rvyt4mvSxwITD9Fmr1HtvmFb6LdgQD8KA==" />
+=======
+              <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="XUCWdPuhqxiBq3NQ0wr1ee20FS80Tt+9b4e769yP09u8WvZ1L5RX/nT4eedUwPry0aFvCzg5BCpUyDPiFfEkcQ==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
 
                 <input type="hidden" name="repository_id" value="847885">
 
@@ -805,7 +833,11 @@
 
         <details-dialog class="notifications-component-dialog " data-target="notifications-list-subscription-form.customDialog" hidden>
           <div class="SelectMenu-modal notifications-component-dialog-modal overflow-visible">
+<<<<<<< HEAD
             <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Cuo4jjl0AgDyOSJNKV8XmEJb8lMXXzOWpf0hwJrjSyTr8FiP7UH+5gdqKPqulRgTfk6Idxso6AGesqnJU528jg==" />
+=======
+            <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="tgo3IDLMZlCRhjmY2L/TPyd9x/matFuJNNuGVt5yUcxXEFch5vmatmTVMy9fddy0G2i93ZbDgB4PlA5fFwymZg==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
 
               <input type="hidden" name="repository_id" value="847885">
 
@@ -963,7 +995,11 @@
 
   <li>
         <div class="d-block js-toggler-container js-social-container starring-container ">
+<<<<<<< HEAD
     <form class="starred js-social-form" action="/mathjax/MathJax/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="p/DpF+koJckQQLBE1ovoSrZDsVxC1WrK9skEoGbpKUypJ6uYyOr0NvwHR7dQAF0Rrz0EH7SGTCpAo7WMdSnkIQ==" />
+=======
+    <form class="starred js-social-form" action="/mathjax/MathJax/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="h33NCoZ7LOuiQQb9PrA61z3LaULSQxK3UXfe6oVzx02Jqo+Fp7n9FE4G8Q64O4+MJLXcASQQNFfnHW/GlrMKIA==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
       <input type="hidden" name="context" value="repository">
       <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar mathjax/MathJax" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:847885,&quot;originating_url&quot;:&quot;https://github.com/mathjax/MathJax/blob/master/es5/tex-mml-chtml.js&quot;,&quot;user_id&quot;:34098772}}" data-hydro-click-hmac="acb1825d181b1b153d08aadc60d000904fb4b62f79f4fde0402da01c7301b7d4" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-star-fill mr-1">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
@@ -975,7 +1011,11 @@
            8.2k
         </a>
 </form>
+<<<<<<< HEAD
     <form class="unstarred js-social-form" action="/mathjax/MathJax/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="NMSprb3RORJbM+/CmuMbctrl6A6zzLSIf+TG/7JEOhFVGhwqMhDKdaVIaZDVWO3Bzjv7iO+GZo1EcagoLItzZA==" />
+=======
+    <form class="unstarred js-social-form" action="/mathjax/MathJax/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="wDdXWFoiOKOPRATuClmU5s9eYiPoOXF7e1pQeiqit6ah6eLf1ePLxHE/grxF4mJV24BxpbRzo35Azz6ttG3+0w==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
       <input type="hidden" name="context" value="repository">
       <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star mathjax/MathJax" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:847885,&quot;originating_url&quot;:&quot;https://github.com/mathjax/MathJax/blob/master/es5/tex-mml-chtml.js&quot;,&quot;user_id&quot;:34098772}}" data-hydro-click-hmac="7574929cac6630756fd430b7e70b15d5d60205666ac8728b5d9b2e5060cb8349" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-star mr-1">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
@@ -991,7 +1031,11 @@
   </li>
 
   <li>
+<<<<<<< HEAD
             <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/mathjax/MathJax/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="24gCJ+lprvbJRpcEomSGAGzuHwe9bbJH5/TGQkpDlbdGChq0kCqke1bxvuOJaJA5B+xhImPdB+dNcmGCkHe+YA==" />
+=======
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/mathjax/MathJax/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="s70NRaANV/v69wT/kSjv4suyGwuNNpoil/v4tDlabmMuPxXW2U5ddmVALRi6JPnboLBlLlOGL4I9fV90425FtA==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
               <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:847885,&quot;originating_url&quot;:&quot;https://github.com/mathjax/MathJax/blob/master/es5/tex-mml-chtml.js&quot;,&quot;user_id&quot;:34098772}}" data-hydro-click-hmac="18fe5ebd8cd4b88b8e17f5ed149b49583828c76bd496903d20099a0c05183c3c" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of mathjax/MathJax to your account" aria-label="Fork your own copy of mathjax/MathJax to your account">                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-repo-forked">
     <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
 </svg>
@@ -1486,7 +1530,11 @@
 </svg>
           </a>
 
+<<<<<<< HEAD
           <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/mathjax/MathJax/edit/master/es5/tex-mml-chtml.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="RpslqZdbnJMi8AhdXNQD2oC3QtlcHIXycogxOzsbNdIPsnuPkEMlYqPIRd45nJHgP5cIy4phHtjF1l+tiEUr9Q==" />
+=======
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/mathjax/MathJax/edit/master/es5/tex-mml-chtml.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="rTa0vteGDW+AOBaFM6pAGb/M9HYOmKdjEdC6NcCiFM7kH+qY0J60ngEAWwZW4tIjAOy+ZNjlPEmmjtSjc/wK6Q==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
               <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-pencil">
@@ -1494,7 +1542,11 @@
 </svg>
             </button>
 </form>
+<<<<<<< HEAD
           <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/mathjax/MathJax/delete/master/es5/tex-mml-chtml.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="4G9xHEUswZqtAUHuog6V/JVb2qIGroqUVFBqEy2yOXa4pSES3jZqAO2UtcfvF5PJRw42REiOPln38Qk03cAMKg==" />
+=======
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/mathjax/MathJax/delete/master/es5/tex-mml-chtml.js" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="+UMQ1MTGnN0xuSXLwr1MESugnS5lg96m3uML3VMI0rOhiUDaX9w3R3Es0eKPpEok+fVxyCujamt9Qmj6o3rn7w==" />
+>>>>>>> 0f16c6fee961ebeb828d4dc46792e680eaf4232b
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Fork this project and delete the file" data-disable-with>
               <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-trash">
