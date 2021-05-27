@@ -91,7 +91,7 @@
 .multiples img {
   margin: auto;
   width: auto;
-  max-width: 50%;
+  max-width: 49.6%;
   max-height: 500px;
   padding: 2px;
 }
@@ -107,6 +107,9 @@
   height: auto;
   max-height: 400px;
   text-align: center;
+}
+.variable img {
+  filter: none;
 }
 
 @media (max-width: 1000px) {

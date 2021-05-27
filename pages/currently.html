@@ -109,10 +109,10 @@
                 </p>
                 <h3>Spectral Analysis</h3>
                 <p>
-                    The below image shows the reigon used for spectral analysis. There are many regions. The region descriptions are as follows.
+                    The below image shows the reigon used for spectral analysis. For spectral studies, background was subtracted from a small nearby region. The region descriptions are as follows.
                     <ul>
-                        <li>Central Region : This is the central part of the SNR where the freely expanding ejecta is reheated.</li>
-                        <li>Outer Rim : Outer part of the SNR where the shock waves are visible</li>
+                        <li><b>Central Region :</b> This is the central part of the SNR where the freely expanding ejecta is reheated.</li>
+                        <li><b>Outer Rim :</b> Outer part of the SNR where the shock waves are visible</li>
                     </ul>
                 </p>
             </div>
@@ -122,6 +122,39 @@
             </div>
             <div class="content-info">
                 <h4>Central Region</h4>
+                <p style='padding-top:1px'>
+                    In the enhanced image one can see multiple blobs of emission, which are mainly the reheated ejecta. For this region the absoprtion model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node268.html" target="_blank"><i>wabs</i></a> and for emission, plasma with two thermal components was considered. The emission model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node215.html"><i>raymond</i></a>. Thus giving the final model as 
+                    \[ wabs*(raymond + raymond) \]
+                    The counts being low, we fit the data withh both using Chi-square and CStat and use the one with lower Q value. The fited data is as follows.
+                </p>
+            </div>
+            <div class="content-image multiples variable">
+                <img src="/media/currently_working/DEM_L71/central_contrib_logon.jpg" alt="central region with log scaling">
+                <img src="/media/currently_working/DEM_L71/central_contrib_logoff.jpg" alt="central region with no log scaling">
+            </div>
+            <div class="content-info">
+                <p>
+                    The model here as you can see sometimes underestimates and over estimates the data, near 1keV region. The fit statistics for the same are as follows:
+                </p>
+            </div>
+            <div class="content-image multiples">
+                <img src="/media/currently_working/DEM_L71/central_chi.png" alt="central region fit with chi-square">
+                <img src="/media/currently_working/DEM_L71/central_cstat.png" alt="central region fit with CStat">
+            </div>
+            <div class="content-info">
+                <p>
+                    As you can seen, the chi-square statistics fits the data better, and reduced chi-squared values are:
+                    \[
+                        \chi^2_r ~ (\text{Chi-square}) = 20.427 \hspace{5ex} \chi^2_r ~ (\text{CStat}) = 22.141
+                    \]
+                    Thus the model is in good agrement with the data. The values even though differs slightly from what was previously obtained the values now obtained are within $3\sigma$ limit. Just to have an idea of how hot the plasma is, the obatined componets translates back to $\approx 2.43,~ 8.54 ~~\mathbf{Million} ^\circ K$. Its really very very hot!! 
+                    <br>
+                    The good agreement of the <em>raymond</em> model suggest that the plasma is not so dense and is rather diffused.
+                    <br>
+                    The model also misses some hard emission lines beyoned 4 keV and is most likely because of higher uncertainity in the data beyoned 4 keV.
+                    <br>
+                    The data was also fitted with non-equilibrium, collisonal plasma models and in that case, the fit was not very good, although this doesn't suggest that the plasma is in equilibrium.
+                </p>
             </div>
         </div>
 
