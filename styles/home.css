@@ -70,12 +70,18 @@
   font-weight: 400;
 }
 .home h4 {
-  font-size: 20px;
-  color: rgb(15, 80, 50);
+  font-size: 21px;
+  color: rgb(20, 114, 70);
   font-weight: 650;
   text-decoration: underline;
   text-align: left;
   margin: 1rem 0rem;
+}
+.home h5 {
+  font-size: 44px;
+  color: rgb(57, 128, 74);
+  font-weight: italic;
+  font-family: "Dancing Script", cursive;
 }
 
 .home p {
@@ -89,8 +95,8 @@
   display: block;
   display: flex;
   flex-direction: column;
-  max-width: 90%;
   width: auto;
+  max-width: 90%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
