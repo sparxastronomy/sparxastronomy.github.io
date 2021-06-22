@@ -1,15 +1,4 @@
-/* :root {
-  --text: black;
-  --bkg: rgba(240, 240, 240, 0.945);
-  --card-bkg: white;
-  --shadow: rgba(0, 0, 0, 0.5);
-}
-.dark-theme {
-  --text: #efefef;
-  --bkg: #121212;
-  --card-bkg: rgb(39, 39, 39);
-  --shadow: rgb(0, 0, 0);
-} */
+/* This is the main css for contents on the website except on the home page */
 
 /* Home page styling */
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
