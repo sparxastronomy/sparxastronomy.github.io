@@ -1,10 +1,20 @@
+/* main stylesheet for the webpage */
+
+/* defining main themeing elements */
 :root {
   --text: black;
   --bkg: rgba(240, 240, 240, 0.945);
   --card-bkg: white;
   --shadow: rgba(0, 0, 0, 0.5);
+  --brightness: 100%;
 }
-
+.dark-theme {
+  --text: #efefef;
+  --bkg: #121212;
+  --card-bkg: rgb(39, 39, 39);
+  --shadow: rgb(0, 0, 0);
+  --brightness: 80%;
+}
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
