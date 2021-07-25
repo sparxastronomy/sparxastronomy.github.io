@@ -81,6 +81,20 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.home a:link {
+  color: lightcoral;
+  text-decoration: none;
+}
+
+.home a:visited {
+  color: lightcoral;
+  text-decoration: none;
+}
+.home a:hover {
+  color: lightseagreen;
+  text-decoration: underline;
+}
+
 .boxed-content {
   display: block;
   display: flex;
