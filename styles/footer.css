@@ -7,7 +7,8 @@
   height: auto;
   padding: 50px 100px;
   margin-bottom: 0;
-  background-color: #26282e;
+  background-color: #4c4177;
+  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -67,7 +68,8 @@
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  background-color: rgb(12, 12, 12);
+  background-color: #2b4162;
+  background-image: linear-gradient(0deg, #2b4162 0%, #12100e 74%);
   border-radius: 1000px;
   transition: 0.5s;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
@@ -127,7 +129,8 @@
   text-decoration: none;
   display: inline-block;
   color: white;
-  background-color: rgb(20, 19, 19);
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
   flex-direction: row;
   padding: 0.5rem;
   border-radius: 30px;
@@ -138,6 +141,7 @@
 .info li a:hover {
   transform: translate(20px, 0px);
   background-color: #306ee1;
+  background-image: none;
 }
 
 @media (max-width: 920px) {
