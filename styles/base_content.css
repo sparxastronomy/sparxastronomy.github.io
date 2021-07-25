@@ -63,8 +63,14 @@
 }
 .content-info ul {
   width: 90%;
-  padding: 0 2rem;
+  padding: 0 0rem;
+  margin-left: 3rem;
   text-align: left;
+  font-size: 19px;
+}
+.content-info li {
+  margin: 10px 0;
+  padding: 0;
 }
 
 .content-image {
@@ -91,11 +97,18 @@
   max-width: 100%;
   text-align: center;
 }
+.single a {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
 .single img {
   margin: auto;
   padding: 2px;
   height: auto;
-  max-height: 400px;
+  max-width: 95%;
+  max-height: 550px;
   text-align: center;
 }
 .variable img {

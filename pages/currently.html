@@ -55,12 +55,13 @@
 
     <!-- Currently working-->
     <section class='home' id='currently'>
-        <h1>This Page is under devlopment</h1>
         <div class="boxed-content">
             <p> Welcome to my currently-working page. Here the contents are about the pojects that I'm presently working on.</p>
+            <br>
+            <p> This is a media intensive site, so it might load slowly. Refresh if MathJax doesn't renders properly.</p>
         </div>
         
-        <!-- First content of currently working page -->
+        <!-- DEM L71 project -->
         <div class="content">
             <h1>DEM L71 (<em>SNR J0505.7-6752</em>)</h1>
             <!-- overview -->
@@ -162,10 +163,127 @@
                     <br>
                     The data was also fitted with non-equilibrium, collisonal plasma models and in that case, the fit was not very good, although this doesn't suggest that the plasma is in equilibrium.
                 </p>
-                <h4>Rim</h4>
+                <h4>Outer Rim</h4>
+                <p>
+                    This is the outer region of the SNR, containing the Forward and Reverse shocks. Again for this region the absoprtion model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node268.html" target="_blank"><i>wabs</i></a> and for emission, plasma with two thermal components was considered. The emission model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node215.html"><i>raymond</i></a>. Thus giving the final model as 
+                    \[ wabs*(raymond + raymond) \]
+                    We fit the data withh both using Chi-square statistics, and obtain the following fit.
+                </p>
+            </div>
+            <div class="content-image multiples">
+                <img src="/media/currently_working/DEM_L71/rim_logon.jpg" alt="rim fit with log scaling">
+                <img src="/media/currently_working/DEM_L71/rim_logoff.jpg" alt="rim fit without log scaling">
+            </div>
+            <div class="content-info">
+                <p>
+                    The fit statistics is as follows:
+                </p>
+            </div>
+            <div class="content-image single">
+                <img src="/media/currently_working/DEM_L71/rim_terminal.jpg" alt="Fit ststistics of the rim">
+            </div>
+            <div class="content-info">
+                <p>
+                    From the above, the The reduced chi-squared value is:
+                    \[ \chi^2_r ~ (\text{Chi-square}) = 15.83 \]
+                    and the paramters estimated are well withing $1\sigma$ deviation.
+                    As you can see above, the model again  misses some hard emission lines beyoned 4 keV, and underfits below 0.5 KeV, but overall I think, its a good fit.
+                </p>
+            </div>
+            <div class="content-info">
+                <br>
+                <h3>Conclusion</h3>
+                <p>
+                    With this I would like to conclude this project. The fit statistics obatined for different regions more or less agree with previous results, and I'm partially satisfied with this work.
+                </p>
+                <p>
+                    I'll keep on testing new models on the data, and will try to gain more knowledge about X-ray spectral analysis. I learned quite a few thing doing this project, and I'll look forward to study more such interesting targets in future.
+                </p>
             </div>
         </div>
 
+        <br><br>
+
+        <!-- Cas A project -->
+        <div class="content">
+            <h1>Cassiopeia A SNR</h1>
+            <span class="lines"></span>
+            <div class="overview">
+                <p>
+                    Cas A SNR, is a SNR in the Cassiopeia constellation. It is the brightest extrasolar Radio source above 1 GHz.
+                    The SN occured appoximately 3.4 KPc away witin our Milky Way galaxy, and this is one of the most extensively studied source.
+                </p>
+            </div>
+            <span class="lines"></span>
+            <div class="content-info">
+                <h2>Overview</h2>
+                <p>
+                    Cas A is one of my favourite astrophysical target, and its one of the most widely studied source. It is extensively studied in Radio and Xray bands. It was being studied from early 1600s. For this project, I got data from both Chandra Xray observatory and Hubble space telescope.
+                </p>
+                <p>
+                    For this project, I don't intend to do a spectral study. I plan to create false color image from the latest data, and create an expansion animation, to study the evolution of the SNR. The Hubble data comes from <a href="https://archive.stsci.edu/proposal_search.php?mission=hst&id=10286" target="_blank" rel="noopener noreferrer">HST Propsoal 10286</a>, PI: Robert Fesen. X-ray data comes from multiple CXO obervation from 2000-2020, for complete list visit here.
+                </p>
+                <h3>Basic Data Reduction</h3>
+                <p>
+                    The data from the ACIS instrument has been reduced using CIAO as per the standard procedure, and then merged together. For the HST data, I used three filters: F475W, F775W and F850LP. I used multiple raw observation for the filters and combined them to create a master observation, following  <a href="https://github.com/spacetelescope/notebooks" target="_blank">STScI drizzlepac tutorial</a>. Then the ACIS data was scaled up to match the HST data scale.
+                </p>
+                <h3>False Color Image</h3>
+                <p>
+                    For Creating the X-Ray False color image, The merged observaation is separated into K, L band <i>Iron, Calcium</i> and <i>Titanium</i> Emissions and K band <i>Sulfur</i> and <i>Silicon</i> emission. Then I assigned the the following colors to different elements:                    
+                    <br>
+                </p>
+                <ul>
+                    <li> <b style="color:red">Red</b> : Silicon </li>
+                    <li> <b style="color:orange">Orange</b> : Sulfur </li>
+                    <li> <b style="color:yellow">Yellow</b> : Calcium </li>
+                    <li> <b style="color:green">Green</b> : Titanim </li>
+                    <li> <b style="color:purple">Purple</b> : Iron </li>
+                    <li> <b style="color:blue">Blue</b> : Entire Data </li>
+                    <li> <b style="color:darkgray">Luminosity</b> : Entire Data </li>
+                </ul>
+                <p>
+                    Similarly, I assigned the following colors to the HST data:
+                </p>
+                <ul>
+                    <li> <b style='color:red'>Red</b> : F850LP</li>
+                    <li> <b style='color:green'>Green</b> : F775W</li>
+                    <li> <b style='color:blue'>Blue</b>  : F475W</li>
+                </ul>
+                <p>
+                    Then, overlaying the X-Ray image over the Optical image, gives me the False color composite.                     
+                </p>
+                <div class="content-image single">
+                    <a href="https://flic.kr/p/2mb2baV" target="_blank" rel="noopener noreferrer">
+                        <img src="/media/currently_working/CasA/casA_composite.jpg" alt="Cas A Composite">
+                    </a>
+                </div>
+                <p>
+                    If you look closely, you can clearly identify the Forward and the Reverse shock waves, along with the freely expanding ejecta. Previous studies suggest that, <em>NEI</em> models fits the data well, suggesting that the plasma is not in equilibrium (<a href="https://arxiv.org/pdf/astro-ph/0202207v1.pdf" target="_blank" rel="noopener noreferrer">reference</a>).
+                </p>
+                <p>
+                    The hazy, inner structures is due to the fact, that data have been combined over a large perios of time, and in that large period, the SNR's structure evolved. It will be more clear if you look at the expansion animation below:
+                </p>
+                <div class="content-image single">
+                    <img src="/media/currently_working/CasA/casA_animated.gif" alt="Expansion animation">
+                </div>
+                <p>
+                    The different color intensity for different years is due to the fact that the observation duration is not the same for all the years. If you want to look at individual observations, click 👉 <a href="/media/currently_working/CasA/observations.jpg" target='_blank'>here</a>. 
+                    <br><br>
+                    Even though I've tried to histogram equalization to balace the colors, but still it doesn't matches perfectly. However this gives us the idea about the evolution of the SNR.
+                </p>
+            </div>
+        </div>
+        <br><br>
+        <div class="content">
+            <div class="content-info">
+                <h1>Cosmological N-Body Simulation</h1>
+                <div class="overview">
+                    <p>
+                        Being a long and code-intesive project, this project has its own webpage. Visit this👉 <a href="https://sparxastronomy.github.io/Nbody/" target="_blank" rel="noopener noreferrer">Project Page</a> to know more. 
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
 
