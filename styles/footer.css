@@ -42,7 +42,7 @@
   left: 0;
   width: 70px;
   height: 3px;
-  background: rgb(17, 118, 250);
+  background: rgb(17, 250, 238);
 }
 
 .footer p {
@@ -102,7 +102,7 @@
   width: 70px;
   height: 3px;
   border-radius: 50px;
-  background: rgb(17, 118, 250);
+  background: rgb(17, 250, 238);
 }
 
 .info {

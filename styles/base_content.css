@@ -115,6 +115,12 @@
   filter: none;
 }
 
+/* Button */
+.btn a {
+  font-size: 25;
+  font-style: italic;
+}
+
 @media (max-width: 1000px) {
   .content {
     max-width: 90%;
