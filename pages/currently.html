@@ -47,7 +47,7 @@
     </nav>
     
 
-    <!-- Welome banner -->
+    <!-- Welcome banner -->
     <div class="welcome">
         <div class="welcome-quote">
             <p><br></p>
@@ -57,7 +57,7 @@
     <!-- Currently working-->
     <section class='home' id='currently'>
         <div class="boxed-content">
-            <p> Welcome to my currently-working page. Here the contents are about the pojects that I'm presently working on.</p>
+            <p> Welcome to my currently-working page. Here the contents are about the projects that I'm presently working on.</p>
             <br>
             <p> This is a media intensive site, so it might load slowly. Refresh if MathJax doesn't renders properly.</p>
         </div>
@@ -80,7 +80,7 @@
                      DEM L71 is a Type-1a Supernova(SN) which is a rich Iron(Fe). Proof of Hydrogen were also found as H-$\alpha$ emission were observed. Type-1a SNs are very essential in Astronomy as they act as the standard candles. Being rich in Iron and a Type-1a SN, its most likely that this SNR is due to death of a White-Dwarf star.
                 </p>
                 <p>
-                    For this study, I'm using optical data from WFC3 instrument onboard HST (<b>Propsoal ID: <a href="https://archive.stsci.edu/proposal_search.php?mission=hst&id=13282" target="_blank">1328</a> , PI: You-Hua Chu</b>) and X-ray Data from ACIS instrument of Chandra X-ray Observatory(CXO) (<b>Obs ID: 775, 3867, 4440</b>).
+                    For this study, I'm using optical data from WFC3 instrument onboard HST (<b>Proposal ID: <a href="https://archive.stsci.edu/proposal_search.php?mission=hst&id=13282" target="_blank">1328</a> , PI: You-Hua Chu</b>) and X-ray Data from ACIS instrument of Chandra X-ray Observatory(CXO) (<b>Obs ID: 775, 3867, 4440</b>).
                 </p>
                 <p>
                     My main goal of the study is to create elemental distribution and analyze the spectrum of the target to verify previous results. Also, I’m learning about astrophysical radiative processes, so I’ll be testing new models for understanding the plasma phenomena at SNRs. 
@@ -103,7 +103,7 @@
                     The above images are X-ray RGB images of the SNR. The first image is the un-smoothed image and in the second image each of the channel is smoothed using a <a href="https://cxc.cfa.harvard.edu/ciao/ahelp/csmooth.html" target="_blank"> gaussian kernel</a> ($\sigma_{min}$=3, $\sigma_{max}$=4).
                 </p>
                 <p>
-                    In both the imgaes, one can clearly observe the double shock morphologies, and infact this is a text-book example of double shocks in SNR. The supersonic Forward shock(FS) is driven by the explosion. On the either side of the forward shock there is interstellar medium(ISM).  Behind the FS, the shocked ISM keeps accumulating, along with the ejected materials from the star. The freely expanding ejecta pushes on to the shocked ISM, and a contact discontinuity arises due to density difference between the ISM and the ejecta. As a result, the ejecta never reaches the FS, but insted there is a huge pressure build up behind the FS, which drives the Reverse Shock(RS) by pushing back onto the unshocked ejecta. The RS compresses the unshocked ejected heating the remaining ejecta. The heated freely expanding ejecta is seen in aqua-green color here and one can clearly observe the separation between ejecta and the shockwaves.
+                    In both the images, one can clearly observe the double shock morphologies, and infact this is a text-book example of double shocks in SNR. The supersonic Forward shock(FS) is driven by the explosion. On the either side of the forward shock there is interstellar medium(ISM).  Behind the FS, the shocked ISM keeps accumulating, along with the ejected materials from the star. The freely expanding ejecta pushes on to the shocked ISM, and a contact discontinuity arises due to density difference between the ISM and the ejecta. As a result, the ejecta never reaches the FS, but instead there is a huge pressure build up behind the FS, which drives the Reverse Shock(RS) by pushing back onto the unshocked ejecta. The RS compresses the unshocked ejected heating the remaining ejecta. The heated freely expanding ejecta is seen in aqua-green color here and one can clearly observe the separation between ejecta and the shockwave.
                     </br>
                     </br>
                     The below images will help better understand the above scenario. The first image is the x-ray image enhanced for better feature identification, and the next image is the x-ray image overlaid on top of the optical image, which shows the H-$\alpha$ emission observed by HST.
@@ -119,7 +119,7 @@
                 </p>
                 <h3>Spectral Analysis</h3>
                 <p>
-                    The below image shows the reigon used for spectral analysis. For spectral studies, background was subtracted from a small nearby region. The region descriptions are as follows.
+                    The below image shows the region used for spectral analysis. For spectral studies, background was subtracted from a small nearby region. The region descriptions are as follows.
                     <ul>
                         <li><b>Central Region :</b> This is the central part of the SNR where the freely expanding ejecta is reheated.</li>
                         <li><b>Outer Rim :</b> Outer part of the SNR where the shock waves are visible</li>
@@ -133,9 +133,9 @@
             <div class="content-info">
                 <h4>Central Region</h4>
                 <p style='padding-top:1px'>
-                    In the enhanced image one can see multiple blobs of emission, which are mainly the reheated ejecta. For this region the absoprtion model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node268.html" target="_blank"><i>wabs</i></a> and for emission, plasma with two thermal components was considered. The emission model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node215.html"><i>raymond</i></a>. Thus giving the final model as 
+                    In the enhanced image one can see multiple blobs of emission, which are mainly the reheated ejecta. For this region the absorption model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node268.html" target="_blank"><i>wabs</i></a> and for emission, plasma with two thermal components was considered. The emission model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node215.html"><i>raymond</i></a>. Thus giving the final model as 
                     \[ wabs*(raymond + raymond) \]
-                    The counts being low, we fit the data withh both using Chi-square and CStat and use the one with lower Q value. The fited data is as follows.
+                    The counts being low, we fit the data with both using Chi-square and CStat and use the one with lower Q value. The fitted data is as follows.
                 </p>
             </div>
             <div class="content-image multiples variable">
@@ -156,19 +156,19 @@
                     As you can seen, the chi-square statistics fits the data better, and reduced chi-squared values are:
                     \[ \chi^2_r ~ (\text{Chi-square}) = 20.427 \]
                     \[ \chi^2_r ~ (\text{CStat}) = 22.141 \]
-                    Thus the model is in good agrement with the data. The values even though differs slightly from what was previously obtained the values now obtained are within $3\sigma$ limit. Just to have an idea of how hot the plasma is, the obatined componets translates back to $\approx 2.43,~ 8.54 ~~\mathbf{Million} ^\circ K$. Its really very very hot!! 
+                    Thus the model is in good agreement with the data. The values even though differs slightly from what was previously obtained the values now obtained are within $3\sigma$ limit. Just to have an idea of how hot the plasma is, the obtained components translates back to $\approx 2.43,~ 8.54 ~~\mathbf{Million} ^\circ K$. Its really very very hot!! 
                     <br>
                     The good agreement of the <em>raymond</em> model suggest that the plasma is not so dense and is rather diffused.
                     <br>
-                    The model also misses some hard emission lines beyoned 4 keV and is most likely because of higher uncertainity in the data beyoned 4 keV.
+                    The model also misses some hard emission lines beyond 4 keV and is most likely because of higher uncertainty in the data beyond 4 keV.
                     <br>
-                    The data was also fitted with non-equilibrium, collisonal plasma models and in that case, the fit was not very good, although this doesn't suggest that the plasma is in equilibrium.
+                    The data was also fitted with non-equilibrium, collisional plasma models and in that case, the fit was not very good, although this doesn't suggest that the plasma is in equilibrium.
                 </p>
                 <h4>Outer Rim</h4>
                 <p>
-                    This is the outer region of the SNR, containing the Forward and Reverse shocks. Again for this region the absoprtion model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node268.html" target="_blank"><i>wabs</i></a> and for emission, plasma with two thermal components was considered. The emission model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node215.html"><i>raymond</i></a>. Thus giving the final model as 
+                    This is the outer region of the SNR, containing the Forward and Reverse shocks. Again for this region the absorption model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node268.html" target="_blank"><i>wabs</i></a> and for emission, plasma with two thermal components was considered. The emission model is <a href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node215.html"><i>raymond</i></a>. Thus giving the final model as 
                     \[ wabs*(raymond + raymond) \]
-                    We fit the data withh both using Chi-square statistics, and obtain the following fit.
+                    We fit the data with both using Chi-square statistics, and obtain the following fit.
                 </p>
             </div>
             <div class="content-image multiples">
@@ -187,15 +187,15 @@
                 <p>
                     From the above, the The reduced chi-squared value is:
                     \[ \chi^2_r ~ (\text{Chi-square}) = 15.83 \]
-                    and the paramters estimated are well withing $1\sigma$ deviation.
-                    As you can see above, the model again  misses some hard emission lines beyoned 4 keV, and underfits below 0.5 KeV, but overall I think, its a good fit.
+                    and the parameters estimated are well withing $1\sigma$ deviation.
+                    As you can see above, the model again  misses some hard emission lines beyond 4 keV, and underfits below 0.5 KeV, but overall I think, its a good fit.
                 </p>
             </div>
             <div class="content-info">
                 <br>
                 <h3>Conclusion</h3>
                 <p>
-                    With this I would like to conclude this project. The fit statistics obatined for different regions more or less agree with previous results, and I'm partially satisfied with this work.
+                    With this I would like to conclude this project. The fit statistics obtained for different regions more or less agree with previous results, and I'm partially satisfied with this work.
                 </p>
                 <p>
                     I'll keep on testing new models on the data, and will try to gain more knowledge about X-ray spectral analysis. I learned quite a few thing doing this project, and I'll look forward to study more such interesting targets in future.
@@ -212,17 +212,17 @@
             <div class="overview">
                 <p>
                     Cas A SNR, is a SNR in the Cassiopeia constellation. It is the brightest extrasolar Radio source above 1 GHz.
-                    The SN occured appoximately 3.4 KPc away witin our Milky Way galaxy, and this is one of the most extensively studied source.
+                    The SN occurred approximately 3.4 KPc away within our Milky Way galaxy, and this is one of the most extensively studied source.
                 </p>
             </div>
             <span class="lines"></span>
             <div class="content-info">
                 <h2>Overview</h2>
                 <p>
-                    Cas A is one of my favourite astrophysical target, and its one of the most widely studied source. It is extensively studied in Radio and Xray bands. It was being studied from early 1600s. For this project, I got data from both Chandra Xray observatory and Hubble space telescope.
+                    Cas A is one of my favorite astrophysical target, and its one of the most widely studied source. It is extensively studied in Radio and Xray bands. It was being studied from early 1600s. For this project, I got data from both Chandra Xray observatory and Hubble space telescope.
                 </p>
                 <p>
-                    For this project, I don't intend to do a spectral study. I plan to create false color image from the latest data, and create an expansion animation, to study the evolution of the SNR. The Hubble data comes from <a href="https://archive.stsci.edu/proposal_search.php?mission=hst&id=10286" target="_blank" rel="noopener noreferrer">HST Propsoal 10286</a>, PI: Robert Fesen. X-ray data comes from multiple CXO obervation from 2000-2020, for complete list visit here.
+                    For this project, I don't intend to do a spectral study. I plan to create false color image from the latest data, and create an expansion animation, to study the evolution of the SNR. The Hubble data comes from <a href="https://archive.stsci.edu/proposal_search.php?mission=hst&id=10286" target="_blank" rel="noopener noreferrer">HST Propsoal 10286</a>, PI: Robert Fesen. X-ray data comes from multiple CXO observation from 2000-2020, for complete list visit here.
                 </p>
                 <h3>Basic Data Reduction</h3>
                 <p>
@@ -230,14 +230,14 @@
                 </p>
                 <h3>False Color Image</h3>
                 <p>
-                    For Creating the X-Ray False color image, The merged observaation is separated into K, L band <i>Iron, Calcium</i> and <i>Titanium</i> Emissions and K band <i>Sulfur</i> and <i>Silicon</i> emission. Then I assigned the the following colors to different elements:                    
+                    For Creating the X-Ray False color image, The merged observation is separated into K, L band <i>Iron, Calcium</i> and <i>Titanium</i> Emissions and K band <i>Sulfur</i> and <i>Silicon</i> emission. Then I assigned the the following colors to different elements:                    
                     <br>
                 </p>
                 <ul>
                     <li> <b style="color:red">Red</b> : Silicon </li>
                     <li> <b style="color:orange">Orange</b> : Sulfur </li>
                     <li> <b style="color:yellow">Yellow</b> : Calcium </li>
-                    <li> <b style="color:green">Green</b> : Titanim </li>
+                    <li> <b style="color:green">Green</b> : Titanium </li>
                     <li> <b style="color:purple">Purple</b> : Iron </li>
                     <li> <b style="color:blue">Blue</b> : Entire Data </li>
                     <li> <b style="color:darkgray">Luminosity</b> : Entire Data </li>
@@ -262,7 +262,7 @@
                     If you look closely, you can clearly identify the Forward and the Reverse shock waves, along with the freely expanding ejecta. Previous studies suggest that, <em>NEI</em> models fits the data well, suggesting that the plasma is not in equilibrium (<a href="https://arxiv.org/pdf/astro-ph/0202207v1.pdf" target="_blank" rel="noopener noreferrer">reference</a>).
                 </p>
                 <p>
-                    The hazy, inner structures is due to the fact, that data have been combined over a large perios of time, and in that large period, the SNR's structure evolved. It will be more clear if you look at the expansion animation below:
+                    The hazy, inner structures is due to the fact, that data have been combined over a large period of time, and in that large period, the SNR's structure evolved. It will be more clear if you look at the expansion animation below:
                 </p>
                 <div class="content-image single">
                     <img src="/media/currently_working/CasA/casA_animated.gif" alt="Expansion animation">
@@ -270,7 +270,7 @@
                 <p>
                     The different color intensity for different years is due to the fact that the observation duration is not the same for all the years. If you want to look at individual observations, click 👉 <a href="/media/currently_working/CasA/observations.jpg" target='_blank'>here</a>. 
                     <br><br>
-                    Even though I've tried to histogram equalization to balace the colors, but still it doesn't matches perfectly. However this gives us the idea about the evolution of the SNR.
+                    Even though I've tried to histogram equalization to balance the colors, but still it doesn't matches perfectly. However this gives us the idea about the evolution of the SNR.
                 </p>
             </div>
         </div>
@@ -280,7 +280,7 @@
             <span class="lines"></span>
             <div class="overview">
                 <p style="text-align: center">
-                    Being a long and code-intesive project, this project has its own webpage.
+                    Being a long and code-intensive project, this project has its own webpage.
                     <br><br>
                     Please visit the <a href='https://github.com/sparxastronomy/Nbody' target="_blank" rel="noopener noreferrer">Github Repository</a> to know more.
                     <br>
