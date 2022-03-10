@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    
+    <div id="preloader"></div>
     <nav class="navbar">
         <div class="logo"><a href="/index.html"><img src="/media/logo/sparxastronomy.png" class="responsive-logo"></img> </a></div>
         <a href="#" class="toggle-button">
@@ -349,6 +349,12 @@
                 fontCache: 'global'
             }
         };
+    </script>
+    <script>
+            var loader =document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.style.display="none";
+            });
     </script>
 </body>
 </html>
