@@ -3,8 +3,9 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 import lit from "@astrojs/lit";
-
 import tailwind from "@astrojs/tailwind";
+
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,5 +20,7 @@ export default defineConfig({
     ssr: {
       external: ["svgo"]
     }
-  }
+  },
+  output: "server",
+  adapter: netlify()
 });

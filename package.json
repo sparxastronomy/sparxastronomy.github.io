@@ -27,6 +27,7 @@
 		"prettier-plugin-astro": "^0.0.12"
 	},
 	"dependencies": {
+		"@astrojs/netlify": "^1.3.0",
 		"@astrojs/tailwind": "^2.1.3",
 		"@tailwindcss/typography": "^0.5.8",
 		"astro-katex": "^1.0.5",
