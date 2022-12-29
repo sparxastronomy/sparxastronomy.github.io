@@ -21,6 +21,6 @@ export default defineConfig({
       external: ["svgo"]
     }
   },
-  output: "server",
+  output: "static",
   adapter: netlify()
 });
