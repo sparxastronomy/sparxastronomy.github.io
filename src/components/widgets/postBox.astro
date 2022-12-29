@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon';
+
+const {post} = Astro.props;
+---
+
+<!-- Rounded box with image -->
+<a href={post.href}>
+    <div class="z-50 mx-auto dark:border-slate-600 bg-gradient-to-b from-green-50 dark:from-slate-800  dark:via-blue-300/40 dark:to-blue-400/60 to-blue-100 w-4/5 md:w-3/4 rounded-2xl shadow-xl hover:-translate-y-1 animation hover:shadow-stone-400 dark:hover:shadow-[#538ab0] duration-300">
+        <div class="w-full h-[1.5px] bg-gradient-to-r from-transparent via-blue-300 dark:via-blue-600 to-transparent"></div>
+        <div class="flex flex-col md:flex-row px-2 py-2 justify-between items-center">
+            <div class="overflow-hidden rounded-xl">
+                <img src={post.featuredImage} class="rounded-xl"/>
+            </div>
+            <div class="flex-col text-center font-body px-2 py-2">
+                <h2 class="font-sans">
+                    {post.title}
+                </h2>
+                <p class="text-justify md:px-4">
+                    {post.excerpt}
+                </p>
+                <a href={post.href} class="group inline-flex rounded-full bg-slate-800 font-medium dark:bg-slate-100 text-white dark:text-black px-4 py-2">
+                    Read more
+                    <svg class="hidden md:flex mt-[0.42em] ml-2 -mr-2 stroke-[2px] stroke-white dark:stroke-midnight" fill="none" width="20" height="20" viewBox="0 0 15 15" aria-hidden="true">
+                        <path class="transition opacity-0 group-hover:opacity-100" d="M0 5h7"></path>
+                        <path class="transition group-hover:translate-x-[3px]" d="M1 1l4 4-4 4"></path>
+                    </svg>
+                    <div class="flex items-center justify-center ml-2 md:hidden animate-pulse">
+                        <Icon name="clarity:cursor-hand-click-line" class='w-6 h-6' />
+                    </div>
+                </a>
+            </div>  
+        </div>
+    </div>
+</a>    
+
+<style>
+    /* Auto resize the image */
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+    }
+</style>

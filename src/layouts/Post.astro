@@ -1,0 +1,79 @@
+---
+import { Container } from '@littlesticks/odyssey-theme-components';
+import Layout from './Page.astro'; 
+import { generateTagData } from '../utils/helpers';
+import { Image } from '@astrojs/image/components';
+
+const {content: {title, description, publishDate, canonicalURL, featuredImage, tags} } = Astro.props;
+
+let allTagsData = [];
+
+if(tags && tags.length > 0){
+  allTagsData = generateTagData(tags);
+}
+
+const seo = {
+	title,
+	description,
+  publishDate,
+	canonicalURL,
+	image: featuredImage,
+};
+---
+<Layout seo={seo}> 
+  <div class="flex flex-col justify-center items-center px-4 font-body">
+    <!-- Tags -->
+    <div class="pt-4">
+      <ul class="flex flex-row flex-wrap px-2 justify-between">
+      {allTagsData.map(tag => (
+        <li class="flex mx-2 px-2 py-2 rounded-xl bg-trust-50 dark:bg-gray-700 shadow-lg border-1 hover:-translate-y-2 transition-transform ease-out duration-500 hover:shadow-trust-400">
+          <a href={`/research/tags/${tag.slug}`}>
+            {tag.title}
+          </a>
+        </li>
+      ))}
+      </ul>
+    </div>
+    
+    <!-- Post content -->
+    <div class="flex flex-col md:px-2 md:w-5/6 justify-center items-center pt-4">
+      <!-- div containing the tile and featured image -->
+      <div>
+        <h1 class="text-center">{title}</h1>
+        <h4 class="text-center">{publishDate}</h4>
+        <div class="flex text-center justify-center mx-auto px-4">
+          <!-- <img class='overflow-hidden rounded-xl' src={featuredImage} alt={title} /> -->
+          {
+            <Image
+              src={featuredImage}
+              alt={title}
+              class="overflow-hidden rounded-xl"
+              width={1000}
+              aspectRatio={16/9}
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              loading="lazy"
+              quality={100}
+              format="webp"
+              />
+          }
+        </div>
+      </div>
+      
+      <!-- div containing the post -->
+      <div class="px-2 text-justify">
+        <article id="article" class='py-2 md:text-xl'>
+          <slot></slot>
+        </article>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Auto resize the image */
+  img {
+      width: 100%;
+      height: auto;
+      max-width: 1000px;
+  }
+</style>

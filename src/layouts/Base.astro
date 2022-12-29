@@ -1,0 +1,36 @@
+---
+import '../styles/index.css';
+import BaseHead from '../components/head/BaseHead.astro';
+import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
+import BasicScript from '../components/core/BasicScript.astro';
+
+export interface Props {
+	seo?: BaseHeadProps;
+}
+
+const { seo } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead {...seo} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+		
+		<!-- Loading Katex -->
+		<link rel="preload" as="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"  crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	</head>
+	<body>
+	<BasicScript />
+    <slot name="announcement-bar" />
+	<slot name="header" />
+	<main id="content">
+		<slot />
+	</main>
+	<slot name="footer" />
+	</body>
+</html>

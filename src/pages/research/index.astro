@@ -1,0 +1,61 @@
+---
+import { parse, isBefore } from 'date-fns';
+import Layout from '../../layouts/Page.astro';
+import PostBox from '../../components/widgets/postBox.astro';
+
+const posts = await Astro.glob('./posts/*.mdx').then(posts =>
+	posts
+		.map(({ frontmatter, url }) => ({
+			title: frontmatter.title,
+			description: frontmatter.description,
+			authors: frontmatter.authors,
+			publishDate: parse(frontmatter.publishDate, 'MMMM d, yyyy', new Date()),
+			featuredImage: frontmatter.featuredImage,
+			excerpt: frontmatter.excerpt,
+			href: url,
+		}))
+		.sort((a, b) => {
+			if (isBefore(a.publishDate, b.publishDate)) return 1;
+			if (isBefore(b.publishDate, a.publishDate)) return -1;
+			return 0;
+		})
+);
+// const post1 = await Astro.glob('./posts/*.mdx')
+
+const seo = {
+	title: 'Research | Sparxastronomy',
+	description: 'Research and Projects by Bipradeep',
+};
+---
+
+<Layout {seo}>
+	<!-- div wrapping the contents -->
+	<div>
+		<div class="py-[3em] font-sans mx-auto w-4/5 md:w-3/4">
+			<div class="flex flex-col px-4 py-4 bg-[#e6e4e0] dark:bg-[#161f16]/50 backdrop-opacity-10 dark:backdrop-blur-xl rounded-2xl justify-center shadow-xl dark:shadow-gray-700">
+				<h1 class="text-center tracking-wider">
+					Research
+				</h1>
+				<p class="font-xl font-body text-justify font-light">
+					Here you can find all my research and projects. I am currently working on effects of AGN Feedback on large scale matter distribution. I will be updating this page as I progress. You can also find my previous project and experieces below.
+				</p>
+				<p class="font-xl font-body text-center font-light">
+					Feel free to reach out if you want to collaborate 🙂.
+				</p>
+			</div>
+		</div>
+		<div class="py-6 font-sans flex flex-col justify-center items-center">
+			<h2>
+				Test for posts
+			</h2>
+			<ul class="justify-center items-center text-center">
+				{posts.map(post => (
+					<li class="py-5">
+						<PostBox post={post} />
+						</li>
+						))}
+			</ul>
+		</div>
+	</div>
+</Layout>
+

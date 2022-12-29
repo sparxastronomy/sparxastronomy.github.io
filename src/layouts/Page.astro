@@ -1,0 +1,38 @@
+---
+// import { Button, Footer } from '@littlesticks/odyssey-theme-components';
+import Header from '../components/widgets/Header.astro';
+import Footer from '../components/widgets/Footer.astro';
+import Layout from './Base.astro';
+import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
+import Logo from '../components/Logo.astro';
+import settings from '../config/settings';
+import { footerLists, footerSocials } from '../config/footer';
+import {ThemeSwitcher} from '../components/theme-switcher/theme-switcher';
+
+
+export interface Props {
+	seo?: BaseHeadProps;
+}
+
+import { nav } from '../config/nav.js';
+
+const { seo } = Astro.props as Props;
+---
+
+<Layout seo={seo}>
+	<!-- <Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo />
+		</span>
+		<Button slot="action-item" class='bg-blue' href="/theme/get-started">Get Started</Button>
+	</Header> -->
+	<Header />
+	<!-- Padding to avoid the header -->
+	<div class="bg-white dark:bg-slate-800 pt-[4.7em] md:pt-[5.7em]">
+	</div>
+	<!-- Slot for contents -->
+	<div id="page" class="dark:bg-dark-b dark:text-slate-200 flex flex-col justify-center items-center">
+		<slot />
+	</div>
+	<Footer />
+</Layout>
