@@ -20,22 +20,23 @@ const social = [
             <div class="backdrop-filter backdrop-blur-[0.8em] bg-opacity-50 bg-white dark:bg-dark-b dark:bg-opacity-50 dark:text-slate-200">
                 <!-- add a separating line -->
                 <div class="h-[0.15em] bg-gradient-to-r from-rose-400 to-orange-300 mx-auto w-4/5 rounded-full"></div>
-                <div class="w-3/4 mx-auto py-4 px-2 font-sans grid lg:grid-cols-3 gap-4 justify-between">
-                    
+                
+                <!-- Div containing the Footer contents -->
+                <div class="w-4/5 md:w-3/4 mx-auto py-4 px-2 grid-rows-2 gap-8 lg:grid-rows-none lg:grid lg:grid-flow-col lg:grid-cols-2 col-auto lg:gap-8">    
                     <!-- Contacts and Social -->
-                    <div>
-                        <h3 class=" text-center font-bold font-body">
+                    <div class="flex flex-col w-auto">
+                        <h3 class="text-center font-bold font-porza">
                             Contacts and Social
                         </h3>
-                        <p class="text-justify">
+                        <p class="text-justify flex-wrap font-lora italic">
                             Fastest way to reach me is through Email or LinkedIn. You can also find me on Twitter and Instagram.
                         </p>
                         <!-- Email Me Link  -->
-                        <a href="#" class="inline-flex self-center tracking-wide underline underline-offset-[5px]">
+                        <a href="#" class="inline-flex tracking-wide underline underline-offset-[3px]">
                                 <Icon name="tabler:mail" class="w-8 h-8 transform hover:rotate-[-10deg] hover:scale-110 transition"/>
                                 <span class="pl-3 font-medium">
                                 </span>     
-                                <p>Email me</p>
+                                <p class="font-porza">Email me</p>
                         </a>
 
                         <!-- Add a row of social media icons and their links -->
@@ -55,17 +56,19 @@ const social = [
                     </div>
 
                     <!-- Quick Links to CV and Publications -->
-                    <div class="flex flex-col">
-                        <h3 class="text-center font-body font-bold">
+                    <div class="flex flex-col mt-4 lg:mt-0">
+                        <h3 class="text-center font-bold font-porza">
                             Quick Links
                         </h3>
                         <!-- Add a link to CV and Publications-->
                         <div>
-                            <ul class="list list-disc px-10 h-full space-y-6">
-                                <li>
-                                    <Button link='/BipradeepSaha_Curriculum_Vitae.pdf' label='Curriculam Viate'></Button>
+                            <ul class="space-y-6 flex-col font-porza">
+                                <li class="flex">
+                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7" optimize={false} />
+                                    <Button link='/BipradeepSaha_Curriculum_Vitae.pdf' label='Resume'></Button>
                                 </li>
-                                <li>
+                                <li class="flex">
+                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7" optimize={false} />
                                     <Button link='#' label='Publications'></Button>
                                 </li>
                             </ul>
@@ -73,14 +76,14 @@ const social = [
                     </div>
                     
                     <!-- Brief About me -->
-                    <div class="flex flex-col">
-                        <h3 class="font-body font-bold">
+                    <!-- <div class="flex flex-col lg:mg-0">
+                        <h3 class="font-porza font-bold">
                             About Me
                         </h3>
-                        <p class="text-justify">
+                        <p class="text-justify font-lora italic">
                             Bipradeep Saha is a fourth year undergraduate at IISER-Kolkata. His interest lies in Computational Cosmology and Quantitative fincance and using Machine learning in Astronomy. Apart from this he is a photographer with interests in abstract and natural arts.
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
