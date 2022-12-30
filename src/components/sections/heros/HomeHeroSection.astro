@@ -8,7 +8,7 @@ import { Image, Picture } from '@astrojs/image/components';
 
 <!-- This is the component to be used in home page. Design it using tail wind -->
 <homehero id="homehero" class="z-10 flex flex-col bg-white dark:bg-dark-b">
-	<div class='flex overflow-hidden'>
+	<!-- <div class='flex overflow-hidden'>
 		<Image
 		src="/assets/images/hero.jpg"
 		alt="Sparxastronomy Landing Cover Image"
@@ -16,22 +16,34 @@ import { Image, Picture } from '@astrojs/image/components';
 		height="1000"
 		aspectRatio="16:9"
 		/>
+	</div> -->
+	<div class="bg-no-repeat bg-center bg-cover bg-[url('/assets/images/hero.jpg')] h-[90vh]">
+		<div class="flex flex-col justify-center items-center h-full">
+			<div class="inline bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-5xl font-extrabold md:text-6xl font-porza text-transparent text-center">
+				BIPRADEEP SAHA
+			</div>
+			<div class="mt-4 font-porza font-semibold text-2xl text-center mx-auto w-4/5 sm:w-3/4 text-sky-50">
+				Master's Student, Passionate about Cosmology and Quantitative Finance
+			</div>
+		</div>
 	</div>
+
 	<div class="flex flex-col items-center justify-center px-2 py-4 dark:text-blue-50 font-body">
-		<div class="w-4/5 md:w-3/4 items-center justify-center">
-			<p class="py-2 text-3xl md:text-5xl font-bold text-center tracking-wider">
-				Bipradeep Saha
+		<div class="w-4/5 md:w-2/3 items-center justify-center">
+			
+			<div class="flex-col my-2 font-porza font-normal text-xl md:text-2xl text-center">
+				Hi there👋 welcome to my website !<br>
+				I'm <p class="py-0 inline-flex text-fuchsia-400">Bipradeep</p>
+			</div>
+
+			<p class='font-porza font-medium tracking-wide text-xl text-center'>
+				I'm a Master's student in Physical Sciences at IISER Kolkata
 			</p>
-			<p class='font-medium tracking-wide text-xl text-center'>
-				Master's student in Physical Sciences at IISER Kolkata
-			</p>
-			<p class="my-2 mt-2 font-normal md:text-xl text-center">
-				Hi there👋 welcome to my website.
-			</p>
-			<p class='font-normal md:text-xl text-justify'>
-				I work on Computational Cosmology, and I'm interested in Large Scale Structures and the nature of Dark Matter. I'm also interested in Quantitative Finances.<br>
-				In my free time I like to explore new places and try out new dishes. <br>
-				Check out my recent work below and my past projects in the Research section.<br>
+			
+			<p class='font-lora tracking-wide md:text-xl text-justify'>
+				I work on Computational Cosmology, and I'm interested in Large Scale Structures and the nature of Dark Matter. I'm also interested in Quantitative Finances.<br><br>
+				In my free time I like to explore new places and try out new dishes. <br><br>
+				Check out my recent work below and my past projects in the Research section.<br><br>
 				You are welcomed to check out my caputures in the Photography section. <br><br> 
 				Feel free to contact me if you have any questions or suggestions.
 			</p>
