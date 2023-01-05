@@ -1,13 +1,41 @@
 ---
-// import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon';
 // import { Container, Button } from '@littlesticks/odyssey-theme-components';
 // import settings from '../../../config/settings.js';
 // import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 import { Image, Picture } from '@astrojs/image/components';
+
+
+const language_skills =[
+	{ label: 'Python', level: 'Advance', icon: 'vscode-icons:file-type-python'},
+	{ label: 'Matlab', level: 'Advance', icon: 'vscode-icons:file-type-matlab'},
+	{ label: 'Julia',  level: 'Basic',  icon: 'vscode-icons:file-type-julia'},
+	{ label: 'C++',    level: 'Intermediate', icon: 'gg:c-plus-plus'}
+]
+
+const web_skills =[
+	{ label: 'HTML', level: 'Intermediate'},
+	{ label: 'CSS',  level: 'Intermediate'},
+	{ label: 'JavaScript', level: 'basic'},
+	{ label: 'Tailwind',   level: 'Intermediate'},
+	{ label: 'Astro', level: 'Basic'},
+	{ label: 'git',   level: 'Inntermediate'}
+]
+
+const py_skills =[
+	{ label: 'Numpy',  level: 'Advance'},
+	{ label: 'Scipy',  level: 'Advance'},
+	{ label: 'Pandas', level: 'Advance'},
+	{ label: 'Scikit-learn', level: 'Intermediate'},
+	{ label: 'Matplotlib', level: 'Advance'},
+	{ label: 'Seaborn', level: 'Intermediate'},
+	{ label: 'Astropy', level: 'Intermediate'},
+]
 ---
 
 <!-- This is the component to be used in home page. Design it using tail wind -->
 <homehero id="homehero" class="z-10 flex flex-col bg-white dark:bg-dark-b">
+	<!-- Static Backgrond image to fill the landing page. -->
 	<!-- <div class='flex overflow-hidden'>
 		<Image
 		src="/assets/images/hero.jpg"
@@ -19,11 +47,13 @@ import { Image, Picture } from '@astrojs/image/components';
 	</div> -->
 	<div class="bg-no-repeat bg-center bg-cover bg-[url('/assets/images/hero.jpg')] h-[90vh]">
 		<div class="flex flex-col justify-center items-center h-full">
-			<div class="inline bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-5xl font-extrabold md:text-6xl font-porza text-transparent text-center">
-				BIPRADEEP SAHA
-			</div>
-			<div class="mt-4 font-porza font-semibold text-2xl text-center mx-auto w-4/5 sm:w-3/4 text-sky-50">
-				Master's Student, Passionate about Cosmology and Quantitative Finance
+			<div class="intro-text hidden">
+				<div class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-5xl font-extrabold md:text-6xl font-porza text-transparent text-center">
+					BIPRADEEP SAHA
+				</div>
+				<div class="mt-4 font-porza font-semibold text-2xl text-center mx-auto w-4/5 sm:w-3/4 text-sky-50">
+					Master's Student, Passionate about Cosmology and Quantitative Finance
+				</div>
 			</div>
 		</div>
 	</div>
@@ -40,15 +70,68 @@ import { Image, Picture } from '@astrojs/image/components';
 				I'm a Master's student in Physical Sciences at IISER Kolkata
 			</p>
 			
-			<p class='font-lora tracking-wide md:text-xl text-justify'>
+			<p class='font-body font-medium tracking-wide md:text-xl text-justify'>
 				I work on Computational Cosmology, and I'm interested in Large Scale Structures and the nature of Dark Matter. I'm also interested in Quantitative Finances.<br><br>
 				In my free time I like to explore new places and try out new dishes. <br><br>
 				Check out my recent work below and my past projects in the Research section.<br><br>
-				You are welcomed to check out my caputures in the Photography section. <br><br> 
+				You are welcome to check out my caputures in the Photography section. <br><br> 
 				Feel free to contact me if you have any questions or suggestions.
 			</p>
 		</div>
+
+		<!-- Skills section: Python and Web-deveploment skills -->
+		<div class="justify-center items-center text-center mt-4 w-4/5 md:w-2/3">
+			<!-- <h2 class="font-body tracking-wide mt-4">
+				Skills <span class="pl-4"></span> 
+			</h2> -->
+			<div class="inline-flex items-center justify-center w-full">
+				<h3 class="font-porza">Language Skills</h3>
+			</div>
+			<ul class="inline-flex flex-col md:flex md:flex-row justify-between items-start mx-auto">
+				{
+					language_skills.map(({label, level, icon}) => (
+						<li class="px-2">
+							<div class="group inline-flex grid-2 align-middle justify-start">
+								{ <Icon name={icon} class="w-7 h-7 my-auto" /> }
+								<div class="flex-col pl-2 font-porza py-auto">
+									<p class="font-medium my-0">{label}</p>	
+									<p class="font-thin font-sans my-0">{level}</p>
+								</div>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+
+		</div>
+
 	</div>
 </homehero>
 
+<style>
+	/* Animate the intro text class on pageload from bottom up */
+	.intro-text {
+		animation: intro-text 1s ease-in-out;
+	}
+	@keyframes intro-text {
+		0% {
+			transform: translateY(100vh);
+		}
+		100% {
+			transform: translateY(0%);
+		}
+	}
+</style>
 
+<script>
+	function onPageLoad(){
+
+		// Get the intro text element
+		var introText = document.querySelector('.intro-text');
+		
+		// Remove the 'hidden' class from the element
+		introText.classList.remove('hidden');
+	}
+
+	window.addEventListener('load', onPageLoad);
+</script>
