@@ -8,8 +8,10 @@ import tailwind from "@astrojs/tailwind";
 // remark math and rehype katex
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import addClasses from 'rehype-add-classes';
 
 import netlify from "@astrojs/netlify/functions";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,10 +21,23 @@ export default defineConfig({
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
 
-  integrations: [sitemap(), image(), lit(), tailwind(), mdx({
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
-  })],
+  markdown: {
+    // Can be 'shiki' (default), 'prism' or false to disable highlighting
+    syntaxHighlight: 'prism',
+  },
+
+  integrations: [sitemap(), image(), lit(), tailwind(),
+    mdx({
+      extendDefaultPlugins: true,
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex,
+                      [addClasses, {
+                        ul: 'list-disc pl-2',
+                        }
+                      ],
+                    ]
+      })
+  ],
 
    vite: {
     ssr: {

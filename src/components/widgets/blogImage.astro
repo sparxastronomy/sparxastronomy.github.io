@@ -1,0 +1,23 @@
+---
+import { Picture } from '@astrojs/image/components';
+
+const { src, srcset, alt, aspectRatio, sizes } = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center my-4">
+  <div class="rounded-lg overflow-hidden my-2">
+    <!-- <Picture
+      src= {src}
+      alt={alt}
+      widths={widths}
+      aspectRatio={aspectRatio}
+      quality={100}
+      sizes={sizes}
+    /> -->
+    <img src={src}
+         alt={alt}
+         srcset={srcset}
+         sizes={sizes}>
+  </div>
+  <p class="font-normal font-sans text-sm">{alt}</p>
+</div>
