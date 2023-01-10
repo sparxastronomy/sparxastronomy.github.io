@@ -67,14 +67,14 @@ export const footerLists = [
 				title: 'Style Guide',
 				slug: '/theme/style-guide',
 			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
+			{
+				title: 'Theme Setup',
+				slug: '/theme/theme-setup',
+			},
+			{
+				title: 'Customizing Odyssey',
+				slug: '/theme/customizing-odyssey',
+			}
 		],
 	},
 ];

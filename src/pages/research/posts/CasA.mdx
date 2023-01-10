@@ -1,0 +1,63 @@
+---
+layout: '../../../layouts/Post.astro'
+title: Cassiopeia A SNR
+description: This is a sample blog post for Odyssey
+publishDate: January 15, 2022
+featuredImage: 'https://ik.imagekit.io/sparxastronomy/tr:w-800,lo-true/CasA/CasA'
+excerpt: 'Cassiopeia A is a supernova remnant in the constellation Cassiopeia and the brightest extrasolar radio source in the sky at frequencies above 1 GHz. In this project I created a multiwavelength compostion and expansion animation'
+tags: ['Supernova', 'Composite Imaging']
+---
+
+import Picture from '../../../components/widgets/blogImage.astro'
+import { Prism } from '@astrojs/prism';
+
+
+
+## Overview
+Cas A is one of my favorite astrophysical target, and its one of the most widely studied source. It is extensively studied in Radio and Xray bands. It was being studied from early 1600s. For this project, I got data from both Chandra Xray observatory and Hubble space telescope.
+
+For this project, I don't intend to do a spectral study. I plan to create false color image from the latest data, and create an expansion animation, to study the evolution of the SNR. The Hubble data comes from [HST Propsoal 10286](https://archive.stsci.edu/proposal_search.php?mission=hst&id=10286), PI: Robert Fesen. X-ray data comes from multiple CXO observation from 2000-2020, for complete list visit here.
+
+## Basic Data Reduction
+The data from the ACIS instrument has been reduced using CIAO as per the standard procedure, and then merged together. For the HST data, I used three filters: F475W, F775W and F850LP. I used multiple raw observation for the filters and combined them to create a master observation, following [STScI drizzlepac tutorial](https://github.com/spacetelescope/notebooks). Then the ACIS data was scaled up to match the HST data scale.
+
+## False Color image
+For Creating the X-Ray False color image, The merged observation is separated into K and L band *Iron*, *Calcium* and *Titanium* Emissions and K band *Sulfur* and *Silicon* emission. Then I assigned the the following colors to different elements:
+
+  - Red : Silicon
+  - Orange : Sulfur
+  - Yellow : Calcium
+  - Green : Titanium
+  - Purple : Iron
+  - Blue : Entire Data
+  - Luminosity : Entire Data
+
+Similary I assigned the following colors to the HST data
+  - Red : F850LP
+  - Green : F775W
+  - Blue : F475W
+
+
+Then, overlaying the X-Ray image over the Optical image, gives the False color composite, which is also the featured image of this article. 
+<Picture src="https://ik.imagekit.io/sparxastronomy/CasA/CasA"
+         srcset = "https://ik.imagekit.io/sparxastronomy/tr:w-400,lo-true/CasA/CasA 400w,
+                   https://ik.imagekit.io/sparxastronomy/tr:w-500,lo-true/CasA/CasA 500w,
+                   https://ik.imagekit.io/sparxastronomy/tr:w-800,lo-true/CasA/CasA 800w"
+         alt="Cassiopeia A SNR in X-ray and Optical spectrum." 
+         sizes="(max-width: 400px) 400px, (max-width: 500px) 500px, (max-width: 800px) 800px, 700px"/>
+
+If you look closely, you can clearly identify the Forward and the Reverse shock waves, along with the freely expanding ejecta. Previous studies suggest that, *NEI* (non equilibrium) models fits the data well, suggesting that the plasma is not in equilibrium [(reference)](https://arxiv.org/pdf/astro-ph/0202207v1.pdf).
+
+The hazy, inner structures is due to the fact, that data have been combined over a large period of time, and in that large period, the SNR's structure evolved. It will be more clear if you look at the expansion animation below:
+
+<Picture src="https://ik.imagekit.io/sparxastronomy/CasA/CasA"
+         srcset = "https://ik.imagekit.io/sparxastronomy/tr:w-400,lo-true/CasA/CasA_expansion.gif 400w,
+                   https://ik.imagekit.io/sparxastronomy/tr:w-500,lo-true/CasA/CasA_expansion.gif 500w,
+                   https://ik.imagekit.io/sparxastronomy/tr:w-800,lo-true/CasA/CasA_expansion.gif 800w"
+         alt="Cassiopeia A SNR in X-ray Spectrem evolving from 2002 to 2019." 
+         sizes="(max-width: 400px) 400px, (max-width: 500px) 500px, (max-width: 800px) 800px, 700px"/>
+
+
+The different color intensity for different years is due to the fact that the observation duration is not the same for all the years. If you want to look at individual observations, click 👉 [here](https://ik.imagekit.io/sparxastronomy/CasA/CasA_observations.jpg).
+
+Even though I've tried to histogram equalization to balance the colors, but still it doesn't matches perfectly. However this gives us the idea about the evolution of the SNR.

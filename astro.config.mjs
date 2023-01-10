@@ -32,7 +32,8 @@ export default defineConfig({
       remarkPlugins: [remarkMath],
       rehypePlugins: [rehypeKatex,
                       [addClasses, {
-                        ul: 'list-disc pl-2',
+                        ul: 'list list-disc list-inside pl-4',
+                        a: 'text-blue-500 underline underline-offset-8 hover:text-blue-600',
                         }
                       ],
                     ]
