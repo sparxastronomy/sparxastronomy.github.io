@@ -23,7 +23,6 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ["'Nunito'", ...defaultTheme.fontFamily.sans],
-				'body': ["'Varela Round'", ...defaultTheme.fontFamily.sans],
 				lora: "'Lora', serif",
 				porza: "'Proza Libre', sans-serif",
 			},
