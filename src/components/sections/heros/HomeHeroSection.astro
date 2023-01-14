@@ -14,19 +14,19 @@ const language_skills =[
 ]
 
 const web_skills =[
-	{ label: 'HTML', level: 'Intermediate'},
-	{ label: 'CSS',  level: 'Intermediate'},
-	{ label: 'JavaScript', level: 'basic'},
-	{ label: 'Tailwind',   level: 'Intermediate'},
-	{ label: 'Astro', level: 'Basic'},
-	{ label: 'git',   level: 'Intermediate'}
+	{ label: 'Git',   level: 'Intermediate', icon: 'tabler:brand-git'},
+	{ label: 'HTML', level: 'Intermediate', icon: 'tabler:brand-html5'},
+	{ label: 'CSS',  level: 'Intermediate', icon: 'tabler:brand-css3'},
+	{ label: 'JavaScript', level: 'Basic', icon: 'tabler:brand-javascript'},
+	{ label: 'Tailwind',   level: 'Intermediate', icon: 'tabler:brand-tailwind'},
+	{ label: 'Astro', level: 'Basic', icon: 'simple-icons:astro'}
 ]
 
-const py_skills =[
+const py_stack =[
 	{ label: 'Numpy',  level: 'Advance'},
 	{ label: 'Scipy',  level: 'Advance'},
 	{ label: 'Pandas', level: 'Advance'},
-	{ label: 'Scikit-learn', level: 'Intermediate'},
+	{ label: 'Scikit-learn', level: 'Basics'},
 	{ label: 'Matplotlib', level: 'Advance'},
 	{ label: 'Seaborn', level: 'Intermediate'},
 	{ label: 'Astropy', level: 'Intermediate'},
@@ -35,16 +35,6 @@ const py_skills =[
 
 <!-- This is the component to be used in home page. Design it using tail wind -->
 <homehero id="homehero" class="z-10 flex flex-col bg-white dark:bg-dark-b">
-	<!-- Static Backgrond image to fill the landing page. -->
-	<!-- <div class='flex overflow-hidden'>
-		<Image
-		src="/assets/images/hero.jpg"
-		alt="Sparxastronomy Landing Cover Image"
-		quality="100"
-		height="1000"
-		aspectRatio="16:9"
-		/>
-	</div> -->
 	<div class="relative">
 		<div class="bg-no-repeat bg-center bg-cover bg-[url('https://ik.imagekit.io/sparxastronomy/tr:w-1920/planetarium.svg')] h-[90vh]">
 			<div class="flex flex-col justify-center items-center h-full backdrop-blur-md sm:backdrop-blur-[2px]">
@@ -61,7 +51,7 @@ const py_skills =[
 			<div class="absolute top-[78vh] w-full">
 				<div class="group relative flex mx-auto items-center justify-center h-[7vh]">
 					<!-- <p class="tracking-wide text-xl mb-0 text-white align-middle">Scroll down</p>  -->
-					<div class="scroll-down-dude px-2"></div>
+					<div class="scroll-down-dude px-2" id="about"></div>
 				</div>
 			</div>
 		</div>
@@ -89,18 +79,15 @@ const py_skills =[
 		</div>
 
 		<!-- Skills section: Python and Web-deveploment skills -->
-		<div class="justify-center items-center text-center mt-4 w-4/5 md:w-2/3">
-			<!-- <h2 class="font-body tracking-wide mt-4">
-				Skills <span class="pl-4"></span> 
-			</h2> -->
+		<div class="text-center mt-4 w-[85%] md:w-2/3">
 			<div class="inline-flex items-center justify-center w-full">
-				<h3 class="font-porza">Language Skills</h3>
+				<h3 class="font-sans tracking-wide">Language Skills</h3>
 			</div>
-			<ul class="inline-flex flex-col md:flex md:flex-row justify-between items-start mx-auto">
+			<ul class="grid grid-cols-2 lg:grid-0 lg:grid-cols-none lg:flex lg:flex-row justify-between mx-auto md:max-w-[80%]">
 				{
 					language_skills.map(({label, level, icon}) => (
-						<li class="px-2">
-							<div class="group inline-flex align-middle justify-start">
+						<li class="px-2 my-4">
+							<div class="group inline-flex align-middle items-start">
 								{ <Icon name={icon} class="w-7 h-7 my-auto" /> }
 								<div class="flex-col pl-2 font-porza py-auto">
 									<p class="font-medium my-0">{label}</p>	
@@ -112,8 +99,42 @@ const py_skills =[
 				}
 			</ul>
 
-		</div>
+			<!-- Python Stack -->
+			<!-- <p class="font-sans text-2xl font-medium tracking-wide">Python Stack</p>
+			<ul class="grid grid-cols-3 sm:grid-cols-4 justify-between mx-auto md:max-w-[80%]">
+				{
+					py_stack.map((items) =>(
+						<li class="px-1 my-3">
+							<div class="group align-middle items-start">
+								<div class="flex-col font-porza py-auto items-start">
+									<p class="font-medium my-0">{items.label}</p>	
+									<p class="font-thin font-sans my-0">{items.level}</p>
+								</div>
+							</div>
+						</li>
+					))
+				}
+			</ul> -->
 
+			<!-- Web development stack -->
+			<p class="font-sans text-2xl font-medium text-center tracking-wide mx-auto w-[80%]">Web Development Stack</p>
+			<ul class="grid grid-cols-2 md:grid-cols-3 justify-between mx-auto md:max-w-[80%]">
+			{
+				web_skills.map((items) =>(
+					<li class="px-1 my-3">
+						<div class="group inline-flex align-middle items-start">
+							{ <Icon name={items.icon} class="w-7 h-7 my-auto" /> }
+							<div class="flex-col font-porza py-auto items-start">
+								<p class="font-medium my-0">{items.label}</p>	
+								<p class="font-thin font-sans my-0">{items.level}</p>
+							</div>
+						</div>
+					</li>
+				))
+			}
+			</ul>
+		</div>
+		<!-- End of skills section -->
 	</div>
 </homehero>
 
