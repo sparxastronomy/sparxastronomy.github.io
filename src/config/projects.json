@@ -1,0 +1,34 @@
+{
+    "projects":[
+        {
+            "title": "Studying the effects of AGN feedback on large scale matter distribution",
+            "advisor": "Dr. Sownak Bose, ICC Durham",
+            "date": "May-September, 2022",
+            "summary": "I used high resolution NBody simulaions like EAGLE and IllustrisTNG to study the effects of AGN feedback on large scale matter distribution using 2 and 3 point statistics. This study will help us understand the how the physics of subgrid manifest onto the large scale matter distribution and identify the statistics that are more responsive to these changes.",
+            "more": false
+        },
+        {
+            "title": "Summer project on Gravitational Waves",
+            "advisor": "Dr. Rajesh Kumble Nayak, IISER Kolkata",
+            "date": "May - July, 2021",
+            "summary": "During this project, where I learnt about Gravitational Waves(GW) and GW data analysis. I learnt about parameter estimation and the problems we faced while estimating Parameters. This project extensively used the python package PyCBC. I also learnt about Particle Swarm Optimization approach to parameter estimation",
+            "more": false
+        },
+        {
+            "title": "Radio Astronomy Winter School",
+            "advisor": "Jointly Organised by IUCAA - Pune and NCRA",
+            "date": "December 2020 - January 2021",
+            "summary": "This was a short radio astronomy school where we learnt about the basics of radio astronomy, and interferometric techiniques. In the end, I presented our analysis on H1 data of pulsar: 1822-096",
+            "more": true,
+            "moreLink": "https://drive.google.com/drive/folders/154B0YthX9ht5Pw5OBcJwOS7ibyCDK2Qb"
+        },
+        {
+            "title": " Electron Acoustic Wave in two electrons populated, dense Fermi plasma with electron exchange and correlation effect",
+            "advisor": "Dr. Swarniv Chandra",
+            "date": "June - August, 2020",
+            "summary": "Using a one-dimensional Quantum Hydrodynamic (QHD) Model, we investigate electron-acoustic waves (EAWs) in a two-electron-populated degenerate Fermi plasma (which is composed of groups of hot and cold electrons and stationary ions) with exchange and correlation effects. I obtained the Linear Dispersion Relation and its dependence on various parameters - like Kinematic Viscosity, the ratio of cold to hot electrons, etc.has been analyzed numerically. Also, the Korteweg-de Vries equation(KdV) is obtained using the reductive perturbation technique, and the solitary profiles were studied.",
+            "more": true,
+            "moreLink": "https://doi.org/10.2139/ssrn.4047489"
+        }
+    ]
+}
