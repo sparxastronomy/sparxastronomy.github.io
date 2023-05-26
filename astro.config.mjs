@@ -28,7 +28,6 @@ export default defineConfig({
 
   integrations: [sitemap(), image(), lit(), tailwind(),
     mdx({
-      extendDefaultPlugins: true,
       remarkPlugins: [remarkMath],
       rehypePlugins: [rehypeKatex,
                       [addClasses, {
