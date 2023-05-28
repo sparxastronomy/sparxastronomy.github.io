@@ -1,10 +1,10 @@
 {
     "projects":[
         {
-            "title": "Studying the effects of AGN feedback on large scale matter distribution",
+            "title": "Investigating the effects of AGN feedback on large scale matter distribution",
             "advisor": "Dr. Sownak Bose, ICC Durham",
             "date": "May-September, 2022",
-            "summary": "I used high resolution NBody simulations - EAGLE and IllustrisTNG to study the effects of AGN feedback on large scale matter distribution using 2 and 3 point statistics. This study will help us understand the how the physics of subgrid manifest onto the large scale matter distribution and identify the statistics that are more responsive to these changes.",
+            "summary": "I used high resolution NBody simulations - EAGLE and IllustrisTNG to investigate the effects of AGN feedback on large scale matter distribution using 2 and 3 point statistics. This study will help us understand the how the physics of subgrid manifest onto the large scale matter distribution and identify the statistics that are more responsive to these changes.",
             "more": false
         },
         {
