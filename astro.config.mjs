@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
@@ -24,9 +25,20 @@ export default defineConfig({
   markdown: {
     // Can be 'shiki' (default), 'prism' or false to disable highlighting
     syntaxHighlight: 'prism',
+    // shikiConfig: {
+		// 	theme: JSON.parse(fs.readFileSync("./houston.theme.json", { encoding: "utf-8" })),
+		// },
   },
 
-  integrations: [sitemap(), image(), lit(), tailwind(),
+  integrations: [
+    sitemap(),
+    image(),
+    tailwind({
+			config: {
+				applyBaseStyles: false,
+			},
+		}),
+    lit(),
     mdx({
       remarkPlugins: [remarkMath],
       rehypePlugins: [rehypeKatex,

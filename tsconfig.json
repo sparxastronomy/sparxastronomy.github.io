@@ -1,10 +1,12 @@
-{
-	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
+{	"extends": "astro/tsconfigs/strict",
+		"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["./src/*"]
+		},
 		"moduleResolution": "node",
 		"experimentalDecorators": true,
-    "useDefineForClassFields": false,
+    	"useDefineForClassFields": false,
 		// Add type definitions for our Vite runtime.
 		"types": ["vite/client"]
 	}
