@@ -41,13 +41,7 @@ export default defineConfig({
     lit(),
     mdx({
       remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex,
-                      [addClasses, {
-                        ul: 'list list-disc list-inside pl-4',
-                        a: 'text-blue-500 underline underline-offset-8 hover:text-blue-600',
-                        }
-                      ],
-                    ]
+      rehypePlugins: [rehypeKatex,]
       })
   ],
 

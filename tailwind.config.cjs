@@ -169,24 +169,24 @@ module.exports = {
 				},
 
 				".heading-1": {
-					"@apply font-obviously text-7xl leading-tight": {},
+					"@apply font-sans text-7xl leading-tight": {},
 				},
 
 				".heading-2": {
-					"@apply font-obviously text-6xl leading-tight": {},
+					"@apply font-sans text-6xl leading-tight": {},
 				},
 
 				".heading-3": {
-					"@apply font-obviously text-4xl leading-tight": {},
+					"@apply font-sans text-4xl leading-tight": {},
 					fontSize: "32px",
 				},
 
 				".heading-4": {
-					"@apply font-obviously text-2xl leading-tight": {},
+					"@apply font-sans text-2xl leading-tight": {},
 				},
 
 				".heading-5": {
-					"@apply font-obviously text-xl leading-tight": {},
+					"@apply font-sans text-xl leading-tight": {},
 				},
 
 				".body": {
@@ -218,7 +218,7 @@ module.exports = {
 				".noise-container": {
 					position: "relative",
 					isolation: "isolate",
-					"@apply bg-astro-gray-700": {}
+					"@apply bg-white dark:bg-astro-gray-700": {}
 				},
 				".noise-underlay": {
 					zIndex: -30,
@@ -247,6 +247,19 @@ module.exports = {
 				},
 
 				".bg-grid": {
+					// https://stackoverflow.com/a/32861765/1332403
+					backgroundSize: "20px 20px",
+					backgroundImage: `linear-gradient(to right, ${theme(
+						"colors.astro-gray.100",
+					)} 1px, transparent 1px),\n    linear-gradient(to bottom, ${theme(
+						"colors.astro-gray.100",
+					)} 1px, transparent 1px)`,
+					backgroundPosition: "top center",
+					imageRendering: "pixelated",	
+					// https://stackoverflow.com/a/9670876/1332403
+					maskImage: `linear-gradient(to bottom, transparent, 5%, white, 95%, transparent)`,
+				},
+				".bg-grid-dark": {
 					// https://stackoverflow.com/a/32861765/1332403
 					backgroundSize: "20px 20px",
 					backgroundImage: `linear-gradient(to right, ${theme(

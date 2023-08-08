@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Page.astro';
+import { format } from "date-fns";
+import { getCollection, CollectionEntry } from 'astro:content';
+import { Image } from '@astrojs/image/components';
+import { randomFromArray } from "~/components/helpers/random.js"
+
+// export const prerender = true;
+
+
+export async function getStaticPaths() {
+	const work = await getCollection('work');
+	return work.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const { title, description, publishDate, featuredImage, excerpt, tags } = entry.data;
+const { canonicalURL } = '/work/' + entry.slug.toString();
+
+const seo = {
+	title,
+	description,
+	publishDate,
+	canonicalURL,
+	image: featuredImage,
+};
+
+const gradients = [
+	"bg-red-pink-gradient",
+	"bg-blue-green-gradient",
+	"bg-blue-purple-gradient",
+	"bg-orange-yellow-gradient",
+]
+
+const placeholderGradient = randomFromArray(gradients)
+---
+
+<Layout seo={seo}>
+	
+	
+		
+		{ featuredImage &&
+            <Image
+              src={featuredImage}
+              alt={title}
+              class="overflow-hidden rounded-xl mx-auto mt-2"
+              width={800}
+              aspectRatio={16/10}
+              sizes="(max-width: 800px) 100vw, 800px"
+              loading="lazy"
+              quality={100}
+              format="webp"
+            />
+        }
+
+	  <div class="grid-container relative mx-auto md:z-10">
+		<div
+			class="noise-container mx-auto w-fit max-w-full bg-white dark:bg-astro-gray-700 py-4 md:px-10 md:py-10 lg:p-12 lg:py-16 xl:p-16 xl:py-20"
+		>
+			<div class="noise"></div>
+			<header class="mx-auto w-full max-w-prose text-center">
+				<time class="code text-astro-gray-400 dark:text-astro-gray-200" datetime={publishDate.toISOString()}>
+					{format(publishDate, "MMMM d, yyyy")}
+				</time>
+				<h1 class="heading-3 my-2 md:heading-2 sm:mb-5 sm:mt-3">{title}</h1>
+				<div class="code flex flex-wrap items-center justify-center gap-4 text-astro-gray-400 dark:text-astro-gray-200">
+					{
+						tags.map((tag) => {
+							return (
+								<div class="flex items-center gap-2">
+									<span class="underline">{tag}</span>
+								</div>
+							)
+						})
+					}
+				</div>
+			</header>
+			<hr class="-mx-16 my-8 border-astro-gray-200 dark:border-astro-gray-500" />
+			<article class="prose text-justify">
+					<Content />
+			</article>
+		</div>
+	</div>
+</Layout>

@@ -1,14 +1,14 @@
 ---
-layout: '../../../layouts/Post.astro'
 title: DEM L71
 description: Post decribing the DEM L71 target and it's analysis
 publishDate: February 22, 2021
 featuredImage: 'https://ik.imagekit.io/sparxastronomy/tr:w-800,lo-true/DEML71/XO.jpg'
 excerpt: 'DEM L71 is an interesting target in the Large Magellanic Cloud which is a small companion galaxy of the Milky Way located 170,000 light-years away. In this study I created multiwavelenght composite using XRay and Optical data and verified previous spectral results.'
-tags: ['Supernova', 'Spectral Studies', 'Composite Imaging']
+tags: 
+  - Supernova
 ---
 
-import Picture from '../../../components/widgets/blogImage.astro'
+import Picture from '../../components/widgets/blogImage.astro'
 import { Prism } from '@astrojs/prism';
 
 ## Overview
@@ -18,11 +18,10 @@ For this study, I'm using optical data from WFC3 instrument onboard HST (Proposa
 
 My main goal of the study is to create elemental distribution and analyze the spectrum of the target to verify previous results. Also, I'm learning about astrophysical radiative processes, so I'll be testing new models for understanding the plasma phenomena at SNRs.
 
-<br/>
+
 ## Basic Data Reduction
 The data from the ACIS instrument has been reduced using CIAO as per the standard procedure. For the HST data, I used Four filters: F450W, F555W, F656N and F814W. I used the pipeline reduced data for F656N filter but used multiple raw observation for other filter and combined them to create a master observation, following STScI [drizzlepac tutorial](https://github.com/spacetelescope/notebooks).
 
-<br/>
 ### X-ray Data analysis
 First, the data is splited to various channel based on the energy distribution  (Hard: 1.2-6 keV, Medium: 0.7-1.2 keV, and Soft: 0.1-0.7 keV) and the plotted them to check for relative contribution. [NOTE : that, I've combined observation from all the above mentioned observations.]
 
@@ -32,7 +31,7 @@ First, the data is splited to various channel based on the energy distribution  
          srcset = "https://ik.imagekit.io/sparxastronomy/tr:w-400,lo-true/DEML71/DEML71_xray.png 400w,
                    https://ik.imagekit.io/sparxastronomy/tr:w-500,lo-true/DEML71/DEML71_xray.png 600w"
          alt="DEML71 in X-ray spectrum." 
-         sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, 600px" />
+         sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, 600px"/>
 
 Then this image is smoothened using a [gaussian kernel](https://cxc.cfa.harvard.edu/ciao/ahelp/csmooth.html) on each of the three channels (parameters: $\sigma_{min}=3, \sigma_{max}=4$). **NOTE**: this step doesn't improves the SNR of the data, but rather makes morpohological studies easier.
 

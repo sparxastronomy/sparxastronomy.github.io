@@ -8,9 +8,9 @@ const {content: {title, description, publishDate, canonicalURL, featuredImage, t
 
 let allTagsData = [];
 
-if(tags && tags.length > 0){
-  allTagsData = generateTagData(tags);
-}
+// if(tags && tags.length > 0){
+//   allTagsData = generateTagData(tags);
+// }
 
 const seo = {
 	title,
@@ -24,7 +24,7 @@ const seo = {
   <div class="flex flex-col justify-center items-center px-4 font-sans">
     <!-- Tags -->
     <div class="pt-4">
-      <ul class="flex flex-wrap px-2 justify-between">
+      <!-- <ul class="flex flex-wrap px-2 justify-between">
       {allTagsData.map(tag => (
         <li class="flex mx-2 my-2 px-2 py-2 rounded-xl bg-trust-50 dark:bg-gray-700 shadow-lg border-1 hover:-translate-y-2 transition-transform ease-out duration-500 hover:shadow-trust-400">
           <a href={`/research/tags/${tag.slug}`}>
@@ -32,7 +32,7 @@ const seo = {
           </a>
         </li>
       ))}
-      </ul>
+      </ul> -->
     </div>
     
     <!-- Post content -->
@@ -60,9 +60,11 @@ const seo = {
       </div>
 
       <!-- div containing the post -->
-      <div class="px-2 text-justify">
-        <div class="py-2 md:text-xl font-sans">
-          <article id="article" class='post-content'>
+      <div class="grid-container relative mx-auto">
+        <div class="noise-container mx-auto bg-white dark:bg-astro-gray-700 py-5 sm:py-8 md:px-10 md:py-12 lg:p-12 lg:py-16 xl:p-16 xl:py-20">
+          <div class="noise"></div>
+          <hr class="-mx-16 my-16">
+          <article class="prose text-justify">
             <slot></slot>
           </article>
         </div>

@@ -1,13 +1,14 @@
-{	"extends": "astro/tsconfigs/strict",
-		"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"~/*": ["./src/*"]
-		},
-		"moduleResolution": "node",
-		"experimentalDecorators": true,
-    	"useDefineForClassFields": false,
-		// Add type definitions for our Vite runtime.
-		"types": ["vite/client"]
-	}
-}
+{
+	"extends": "astro/tsconfigs/base",
+	"compilerOptions": {
+	  "strictNullChecks": true,
+	  "baseUrl": ".",
+	  "paths": {
+		"~/*": ["./src/*"]
+	  },
+	  "importsNotUsedAsValues": "remove"
+	},
+	"include": ["**/*", ".eslintrc.cjs"],
+	"exclude": ["node_modules", "dist", ".netlify", "public"]
+  }
+  
