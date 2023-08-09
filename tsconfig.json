@@ -1,11 +1,14 @@
 {
+	"extends": "astro/tsconfigs/base",
 	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
-		"moduleResolution": "node",
-		"experimentalDecorators": true,
-    "useDefineForClassFields": false,
-		// Add type definitions for our Vite runtime.
-		"types": ["vite/client"]
-	}
-}
+	  "strictNullChecks": true,
+	  "baseUrl": ".",
+	  "paths": {
+		"~/*": ["./src/*"]
+	  },
+	  "importsNotUsedAsValues": "remove"
+	},
+	"include": ["**/*", ".eslintrc.cjs"],
+	"exclude": ["node_modules", "dist", ".netlify", "public"]
+  }
+  

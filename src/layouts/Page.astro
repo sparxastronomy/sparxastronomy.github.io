@@ -15,11 +15,18 @@ const { seo } = Astro.props as Props;
 <Layout seo={seo}>
 	<Header />
 	<!-- Padding to avoid the header -->
-	<div class="bg-white dark:bg-slate-800 pt-[80px] md:pt-[calc(12vh-5px)]">
+	<div class="noise-container pt-[65px] md:pt-[calc(10vh-4px)]">
+		<div class="noise"></div>
+		<hr class="border-astro-gray-500">
 	</div>
+	
 	<!-- Slot for contents -->
-	<div id="page" class="dark:bg-dark-b text-slate-800 dark:text-slate-200 flex flex-col justify-center items-center">
+	<div id="page" class="noise-container w-full text-slate-800 dark:text-slate-200 flex flex-col justify-center items-center">
+		<div class="noise"></div>
 		<slot />
 	</div>
-	<Footer />
+	<div class="noise-container">
+		<div class="noise"></div>
+		<Footer />
+	</div>
 </Layout>

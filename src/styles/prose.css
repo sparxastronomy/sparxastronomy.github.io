@@ -1,0 +1,72 @@
+@layer components {
+	.prose {
+		@apply mx-auto w-full max-w-prose tracking-wide text-astro-gray-700 dark:text-astro-gray-200 lg:text-lg;
+		line-height: 1.75em;
+	}
+
+	.prose > p {
+		@apply my-2 text-xl font-light md:font-normal;
+	}
+
+	.prose > hr {
+		@apply my-8 border-red-500;
+	}
+
+	.prose > h1{
+		@apply text-red-200;
+	}
+
+	.prose > h2 {
+		@apply mb-3 mt-6 font-sans text-[32px] font-semibold leading-[38px] text-red-300 dark:text-red-100;
+	}
+
+	.prose > h3 {
+		@apply mb-2 mt-4 font-sans text-2xl font-normal leading-tight text-blue-300 dark:text-blue-300;
+	}
+
+	.prose > img {
+		@apply my-2;
+	}
+
+	.prose strong {
+		@apply font-medium text-black dark:text-white;
+	}
+
+	.prose ul {
+		@apply my-4 pl-8 font-light;
+	}
+
+	/* the ::marker selector doesn't allow customizing the spacing around the marker as easily */
+	/* .prose ul li::before {
+		content: "";
+		background: url("../icons/star.svg") center no-repeat;
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin-right: 8px;
+		margin-left: -18px;
+	} */
+
+	.prose ol {
+		@apply my-4 list-inside list-decimal pl-4;
+	}
+	.prose ol ::marker {
+		@apply inline-block font-mono font-bold text-astro-pink-light;
+	}
+
+	.prose li {
+		@apply my-2;
+	}
+
+	.prose :where(a) {
+		@apply font-bold  text-astro-pink dark:text-astro-pink-light underline underline-offset-2 hover:no-underline;
+	}
+
+	.prose > p code {
+		@apply mx-0.5 inline-block rounded-lg bg-astro-gray-500 px-2 align-baseline text-sm leading-6 text-astro-gray-100;
+	}
+
+	.prose > pre {
+		@apply my-6 rounded-md border border-astro-gray-400 bg-transparent px-5 py-3 text-sm;
+	}
+}

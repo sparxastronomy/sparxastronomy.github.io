@@ -6,10 +6,10 @@ import ToggleMenu from  '../core/ToggleMenu.astro';
 ---
 
 <header
-	class="fixed top-0 z-40 flex-none mx-auto w-full bg-opacity-60 dark:bg-opacity-60 backdrop-filter backdrop-blur-[0.45em] font-sans"
+	class="fixed top-0 z-40 flex-none mx-auto w-full bg-opacity-10 dark:bg-opacity-10 backdrop-filter backdrop-blur-[0.75em] font-sans"
 	id="header"
 >
-	<div class="px-3 md:py-0 mx-auto w-full md:flex md:justify-between max-w-6xl md:h-[12vh]">
+	<div class="px-4 py-2 md:py-0 mx-auto w-full md:flex md:justify-between md:h-[10vh]">
 		<div class="flex justify-between py-auto my-auto">
 			<a class="flex items-center" href='/'>
 				<Logo />
@@ -20,13 +20,13 @@ import ToggleMenu from  '../core/ToggleMenu.astro';
 			</div>
 		</div>
 		<nav
-			class="items-center w-full md:w-auto hidden md:flex text-blue-500 md:text-gray-600 dark:text-slate-200 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible px-4"
+			class="items-center w-full md:w-auto hidden md:flex text-black dark:text-slate-200 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible px-4"
 			aria-label="Main navigation"
 		>
 			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center text-center w-full  text-2xl md:text-xl">
 				<li class='hover:rounded-xl  hover:bg-gray-100 dark:hover:bg-gray-700 drop-shadow-xl text-right'>
 					<a
-						class="font-medium lg:text-xl hover:text-blue-600 dark:hover:text-blue-400 px-4 py-3 flex text-right transition duration-300 ease-in-out" href='/research'
+						class="font-medium lg:text-xl hover:text-blue-600 dark:hover:text-blue-400 px-4 py-3 flex text-right transition duration-300 ease-in-out" href='/work'
 						>Research</a>
 				</li>
 				<li class='hover:rounded-xl  hover:bg-gray-100 dark:hover:bg-gray-700 drop-shadow-xl flex item-center'>

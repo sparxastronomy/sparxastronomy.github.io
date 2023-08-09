@@ -1,5 +1,5 @@
 ---
-import '../styles/base.css';
+import '../styles/tailwind.css';
 import BaseHead from '../components/head/BaseHead.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
 import BasicScript from '../components/core/BasicScript.astro';
@@ -12,7 +12,9 @@ const { seo } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+	class="overflow-x-hidden bg-white dark:bg-astro-gray-700 text-black dark:text-white"
+>
 	<head>
 		<BaseHead {...seo} />
 		<link rel="stylesheet" href="/assets/styles/prism-material_oceanic.css">
@@ -25,12 +27,12 @@ const { seo } = Astro.props;
 		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"  crossorigin="anonymous" onload="renderMathInElement(document.body);"></script> -->
 	</head>
 	<body>
-	<BasicScript />
-    <slot name="announcement-bar" />
-	<slot name="header" />
-	<main id="content">
-		<slot />
-	</main>
-	<slot name="footer" />
+		<BasicScript />
+		<slot name="announcement-bar" />
+		<slot name="header" />
+		<main id="content">
+			<slot />
+		</main>
+		<slot name="footer"/>
 	</body>
 </html>

@@ -1,26 +1,26 @@
 ---
 import { Icon } from 'astro-icon';
 
-const {post} = Astro.props;
+const {url, post} = Astro.props;
 ---
 
 <!-- Rounded box with image -->
-<a href={post.href}>
+<a href={url}>
     <div class="z-50 mx-auto dark:border-slate-600 bg-gradient-to-b from-green-50 dark:from-slate-800  dark:via-blue-300/30 dark:to-blue-400/30 to-blue-100 w-4/5 md:w-3/4 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-[0.1em] animation hover:shadow-stone-400 dark:hover:shadow-[#639ab0] duration-300 border-1 overflow-hidden">
         <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-blue-300 dark:via-blue-600 to-transparent"></div>
         <div class="flex flex-col md:flex-row px-2 py-2 justify-between items-center">
             <div class="overflow-hidden rounded-xl">
-                <img src={post.featuredImage} alt={post.title} class="rounded-xl"/>
+                <img src={post.data.featuredImage} alt={post.data.title} class="rounded-xl"/>
             </div>
             <div class="flex-col text-center font-sans px-2 py-2">
-                <h2 class="font-sans">
-                    {post.title}
+                <h2 class="font-sans heading-3">
+                    {post.data.title}
                 </h2>
-                <p class="text-justify my-2 md:px-4">
-                    {post.excerpt}
+                <p class="text-justify my-2 md:px-4 font-light">
+                    {post.data.excerpt}
                 </p>
                 <!-- Read More Button -->
-                <a href={post.href} class="group inline-flex rounded-full bg-slate-800 font-medium dark:bg-slate-100 text-white dark:text-black px-4 py-2 my-5">
+                <a href={url} class="group inline-flex rounded-full bg-slate-800 font-normal dark:bg-slate-100 text-white dark:text-black px-4 py-2 my-5">
                     Read more
                     <svg class="hidden md:flex mt-[0.42em] ml-2 -mr-2 stroke-[2px] stroke-white dark:stroke-midnight" fill="none" width="20" height="20" viewBox="0 0 15 15" aria-hidden="true">
                         <path class="transition opacity-0 group-hover:opacity-100" d="M0 5h7"></path>
@@ -40,6 +40,6 @@ const {post} = Astro.props;
     img {
         width: 100%;
         height: auto;
-        max-width: 800px;
+        max-width: 700px;
     }
 </style>
