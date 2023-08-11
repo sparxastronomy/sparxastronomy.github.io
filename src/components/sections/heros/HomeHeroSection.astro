@@ -34,21 +34,22 @@ const py_stack =[
 ---
 
 <!-- This is the component to be used in home page. Design it using tail wind -->
-<homehero id="homehero" class="z-10 flex flex-col bg-white dark:bg-dark-b">
+<homehero id="homehero" class="z-10 flex flex-col w-full pb-20">
 	<div class="relative">
-		<div class="bg-no-repeat bg-center bg-cover bg-[url('https://ik.imagekit.io/sparxastronomy/tr:w-1920/planetarium.svg')] h-[90vh]">
-			<div class="flex flex-col justify-center items-center h-full backdrop-blur-md sm:backdrop-blur-[2px]">
+		<div class="home-graphic">
+		<!-- <div class="home-background -translate-y-[10vh]"> -->
+			<div class="flex flex-col justify-center items-center h-full backdrop-filter backdrop-blur-[0.75em]">
 				<!-- <div class="intro-text hidden"> -->
 				<div>	
 					<div class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-5xl font-extrabold md:text-6xl font-porza text-transparent text-center">
 						BIPRADEEP SAHA
 					</div>
-					<div class="mt-4 font-porza font-semibold text-2xl text-center mx-auto w-4/5 sm:w-3/4 text-gray-900">
+					<div class="mt-4 font-porza font-semibold text-2xl text-center mx-auto w-4/5 sm:w-3/4 text-black dark:text-red-300">
 						Master's Student, Passionate about Cosmology and Quantitative Finance
 					</div>
 				</div>
 			</div>
-			<div class="absolute top-[78vh] w-full">
+			<div class="absolute top-[88vh] w-full">
 				<div class="group relative flex mx-auto items-center justify-center h-[7vh]">
 					<!-- <p class="tracking-wide text-xl mb-0 text-white align-middle">Scroll down</p>  -->
 					<div class="scroll-down-dude px-2" id="about"></div>
@@ -139,6 +140,12 @@ const py_stack =[
 </homehero>
 
 <style>
+	.home-graphic{
+		@apply bg-no-repeat bg-center bg-cover h-[100vh] -translate-y-[10vh];
+		@apply bg-[url('https://ik.imagekit.io/sparxastronomy/LightBg.webp')];
+		@apply dark:bg-[url('https://ik.imagekit.io/sparxastronomy/DarkBg.webp?updatedAt=1691782909363')]
+	}
+
 	/* Animate the intro text class on pageload from bottom up */
 	.intro-text {
 		animation: intro-text 1s ease-in-out;
@@ -160,10 +167,11 @@ const py_stack =[
 		width: 25px;
 		height: 25px;
 		transform: rotate(45deg);
-		border-bottom: 5px solid white;
-		border-right:  5px solid white;
+		border-bottom: 5px solid;
+		border-right:  5px solid;
 		/* make the border rounded */
 		@apply rounded-sm;
+		@apply border-red-400;
 	}
 
 	.scroll-down-dude:before {
