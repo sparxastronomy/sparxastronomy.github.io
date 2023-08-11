@@ -1,6 +1,6 @@
 {
   "name": "Houston",
-  "type": "dark",
+  "type": "Hdark",
   "semanticHighlighting": true,
   "semanticTokenColors": {
     "enumMember": {
