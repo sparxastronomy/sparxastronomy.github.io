@@ -1,10 +1,24 @@
 {
     "projects":[
         {
+            "title": "MS Thesis: Effects of PopIII stars on Galaxy Formation and Evolution",
+            "advisor": "Dr. Rahul Kannan, York University",
+            "date": "May-Present, 2023",
+            "summary": "Over the past decade, numerous works have refined the general picture of inhomogeneous metal enrichment and the transition to Pop II star formation. Understanding the details of Pop III formation is crucial for piecing together present-day galaxy formation. This work will build upon the previous works to create metal enrichment and supernova feedback routine. Then using these routines and High-resolution N-Body simulation, we will study the effect of Pop III stars on the evolution of galaxies.",
+            "more": false
+        },
+        {
+            "title": "Infusing Intrinsic Alignments in Modified Gravity Simulations",
+            "advisor": "Dr. Joachim Harnois-Deraps, Newcastle University",
+            "date": "May-Present, 2023",
+            "summary": "My task was to infuse Intrinsic Alignment using the Non-Linear Alignemnt Model into the Modified Gravity Simulations. We used the BRIDGE and FORGE Lens Modified Gravity Simulation. I did a map level infusion of IA into the Convergence maps, which was recently propsed in 2019. This immediately opened up new avenues of research, and few of the internal teams are working on it. One of the team is using these maps to train Deep Neural Networks to better estimate cosmological parameters, while another team is using these maps to run bayesian analysis to put better constraints on consomological paramters which is necessary for upcoming precision surveys. These maps have will also help people use non-gaussian probes in weak lensing surveys.",
+            "more": false
+        },
+        {
             "title": "Investigating the effects of AGN feedback on large scale matter distribution",
             "advisor": "Dr. Sownak Bose, ICC Durham",
             "date": "May-September, 2022",
-            "summary": "I used high resolution NBody simulations - EAGLE and IllustrisTNG to investigate the effects of AGN feedback on large scale matter distribution using 2 and 3 point statistics. This study will help us understand the how the physics of subgrid manifest onto the large scale matter distribution and identify the statistics that are more responsive to these changes.",
+            "summary": "I used high resolution NBody simulations - EAGLE and IllustrisTNG to investigate the effects of AGN feedback on large scale matter distribution using 2 and 3 point statistics. This study helped us understand the how the physics of subgrid manifest onto the large scale matter distribution and identify the statistics that are more responsive to these changes.",
             "more": false
         },
         {

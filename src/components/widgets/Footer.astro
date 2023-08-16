@@ -15,11 +15,12 @@ const social = [
 
 <!-- Design a cool and minimal footer with contact and share options -->
 <footer>
-    <div class="bg-white dark:bg-dark-b">
-        <div class="bg-no-repeat bg-center bg-[url('/Logo_gen.svg')]">    
-            <div class="backdrop-filter backdrop-blur-[0.8em] bg-opacity-50 bg-white dark:bg-dark-b dark:bg-opacity-50 dark:text-slate-200">
+    <div>
+        <div class="bg-no-repeat bg-center bg-transparent">    
+            <div class="backdrop-filter backdrop-blur-[0.8em] bg-opacity-50 dark:text-slate-200">
+                
                 <!-- add a separating line -->
-                <div class="h-[0.15em] bg-gradient-to-r from-rose-400 to-orange-300 mx-5 sm:mx-8 rounded-full"></div>
+                <div class="h-[0.15em] bg-gradient-to-r from-rose-400 to-orange-300 rounded-full w-full"></div>
                 
                 <!-- Div containing the Footer contents -->
                 <div class="w-4/5 md:w-3/4 mx-auto py-4 px-2 grid-rows-2 gap-8 lg:grid-rows-none lg:grid lg:grid-flow-col lg:grid-cols-2 col-auto lg:gap-8">    
@@ -56,34 +57,25 @@ const social = [
                     </div>
 
                     <!-- Quick Links to CV and Publications -->
-                    <div class="flex flex-col mt-4 lg:mt-0">
+                    <div class="flex flex-col mt-4 lg:mt-0 justify-center">
                         <h3 class="text-center font-bold font-porza">
                             Quick Links
                         </h3>
                         <!-- Add a link to CV and Publications-->
-                        <div>
+                        <div class="mx-auto">
                             <ul class="space-y-6 flex-col font-porza">
                                 <li class="flex">
-                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7" optimize={false} />
+                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7 my-auto" optimize={false} />
                                     <Button link='/BipradeepSaha_Curriculum_Vitae.pdf' label='Resume'></Button>
                                 </li>
                                 <li class="flex">
-                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7" optimize={false} />
+                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7 my-auto" optimize={false} />
                                     <Button link='#' label='Publications'></Button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     
-                    <!-- Brief About me -->
-                    <!-- <div class="flex flex-col lg:mg-0">
-                        <h3 class="font-porza font-bold">
-                            About Me
-                        </h3>
-                        <p class="text-justify font-lora italic">
-                            Bipradeep Saha is a fourth year undergraduate at IISER-Kolkata. His interest lies in Computational Cosmology and Quantitative fincance and using Machine learning in Astronomy. Apart from this he is a photographer with interests in abstract and natural arts.
-                        </p>
-                    </div> -->
                 </div>
             </div>
         </div>
