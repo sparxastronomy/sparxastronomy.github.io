@@ -5,6 +5,7 @@ import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 import lit from "@astrojs/lit";
 import tailwind from "@astrojs/tailwind";
+import fs from "node:fs"
 
 // remark math and rehype katex
 import remarkMath from 'remark-math';
@@ -24,10 +25,10 @@ export default defineConfig({
 
   markdown: {
     // Can be 'shiki' (default), 'prism' or false to disable highlighting
-    syntaxHighlight: 'prism',
-    // shikiConfig: {
-		// 	theme: JSON.parse(fs.readFileSync("./houston.theme.json", { encoding: "utf-8" })),
-		// },
+    // syntaxHighlight: 'prism',
+    shikiConfig: {
+			theme: JSON.parse(fs.readFileSync("./houston.theme.json", { encoding: "utf-8" })),
+		},
   },
 
   integrations: [

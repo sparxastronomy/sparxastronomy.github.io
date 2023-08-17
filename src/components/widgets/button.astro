@@ -4,12 +4,23 @@ import { Icon } from 'astro-icon';
 const { link, label } = Astro.props
 ---
 
-<div>
-    <a href={link} aria-label={label} class="group inline-flex rounded-full bg-slate-800 font-medium dark:bg-slate-100 text-white dark:text-black px-4 py-1">
-    {label}
-    <svg class="flex mt-[0.42em] ml-2 -mr-2 stroke-[2px] stroke-white dark:stroke-midnight" fill="none" width="20" height="20" viewBox="0 0 15 15" aria-hidden="true">
-        <path class="transition opacity-0 group-hover:opacity-100" d="M0 5h7"></path>
-        <path class="transition group-hover:translate-x-[3px]" d="M1 1l4 4-4 4"></path>
-    </svg>
-    </a>
+<div class="button mx-0 px-3">
+    <div class="button-container">
+        <a href={link} aria-label={label} class="group inline-flex rounded-full font-medium text-black dark:text-white h-[40px] ">
+        <p class="my-auto">
+            {label}
+        </p>
+        <svg class="flex my-auto mt-[0.8em] ml-2 -mr-2 stroke-[2px] stroke-black dark:stroke-astro-gray-100" fill="none" width="20" height="20" viewBox="0 0 15 15" aria-hidden="true">
+            <path class="transition opacity-0 group-hover:opacity-100" d="M0 5h7"></path>
+            <path class="transition group-hover:translate-x-[3px]" d="M1 1l4 4-4 4"></path>
+        </svg>
+        </a>
+    </div> 
 </div>
+
+
+<style>
+    .button {
+        background: linear-gradient(247.23deg, rgba(74, 242, 200, 0.2) 0%, rgba(47, 76, 179, 0.2) 100%);
+    }
+</style>

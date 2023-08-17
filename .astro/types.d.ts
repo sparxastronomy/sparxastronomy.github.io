@@ -215,13 +215,6 @@ declare module 'astro:content' {
   collection: "work";
   data: InferEntrySchema<"work">
 } & { render(): Render[".mdx"] };
-"code.mdx": {
-	id: "code.mdx";
-  slug: "code";
-  body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
-} & { render(): Render[".mdx"] };
 };
 
 	};

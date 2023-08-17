@@ -122,8 +122,8 @@ module.exports = {
 				".grid-container": {
 					display: "grid",
 					gridTemplateColumns:
-						"1fr min(var(--container-width, 1280px), calc(100% - (2 * var(--container-gutter-size, 24px)))) 1fr",
-					gridColumnGap: "var(--container-gutter-size, 24px)",
+						"1fr min(var(--container-width, 2000px), calc(100% - (2 * var(--container-gutter-size, 0px)))) 1fr",
+					gridColumnGap: "var(--container-gutter-size, 2px)",
 					overflow: "clip",
 					width: "100%",
 					rowGap: theme("spacing.24"),
@@ -133,8 +133,8 @@ module.exports = {
 						paddingBottom: theme("spacing.32"),
 					},
 					"@media screen(lg)": {
-						rowGap: theme("spacing.40"),
-						paddingBottom: theme("spacing.40"),
+						rowGap: theme("spacing.20"),
+						paddingBottom: theme("spacing.20"),
 					},
 
 					/* center all children by default */
@@ -218,7 +218,7 @@ module.exports = {
 				".noise-container": {
 					position: "relative",
 					isolation: "isolate",
-					"@apply bg-white dark:bg-astro-gray-700": {}
+					"@apply bg-white dark:bg-astro-gray-700 w-full": {}
 				},
 				".noise-underlay": {
 					zIndex: -30,
