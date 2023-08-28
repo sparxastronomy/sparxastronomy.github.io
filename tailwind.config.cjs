@@ -44,7 +44,6 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ["'Nunito'", ...defaultTheme.fontFamily.sans],
-				lora: "'Lora', serif",
 				porza: "'Proza Libre', sans-serif",
 			},
 			backgroundImage: {
