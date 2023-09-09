@@ -1,7 +1,8 @@
 @layer components {
 	.prose {
-		@apply mx-auto w-full max-w-prose tracking-wide text-astro-gray-700 dark:text-astro-gray-200 lg:text-lg;
+		@apply mx-auto tracking-wide text-astro-gray-700 dark:text-astro-gray-200 lg:text-lg;
 		line-height: 1.75em;
+		max-width: 120ch;
 	}
 
 	.prose > p {

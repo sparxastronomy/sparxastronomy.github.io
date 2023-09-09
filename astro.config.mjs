@@ -27,7 +27,9 @@ export default defineConfig({
 			theme: JSON.parse(fs.readFileSync("./houston.theme.json", { encoding: "utf-8" })),
 		},
   },
-
+  image:{
+    domains: ["ik.imagekit.io"],
+  },
   integrations: [
     sitemap(),
     tailwind({
