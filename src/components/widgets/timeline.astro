@@ -9,7 +9,7 @@ const { item } = Astro.props;
         <p class="mb-0 text-xl md:text-2xl font-medium tracking-wide">{item.title}</p>
         <p class="my-2 text-base md:text-xl">{item.advisor}</p>
         <time class="text-xs tracking-wide uppercase dark:text-gray-400">{item.date}</time>
-        <p class="my-3 text-justify">{item.summary}</p>
+        <p class="my-3 text-justify text-lg">{item.summary}</p>
         { item.more && 
             <div class="font-porza">
                 <Button label="Read More" link={item.moreLink}/>

@@ -1,10 +1,5 @@
 ---
 import { Icon } from 'astro-icon';
-// import { Container, Button } from '@littlesticks/odyssey-theme-components';
-// import settings from '../../../config/settings.js';
-// import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
-import { Image, Picture } from '@astrojs/image/components';
-
 
 const language_skills =[
 	{ label: 'Python', level: 'Advance', icon: 'vscode-icons:file-type-python'},
@@ -142,8 +137,8 @@ const py_stack =[
 <style>
 	.home-graphic{
 		@apply bg-no-repeat bg-center bg-cover h-[100vh] -translate-y-[10vh];
-		@apply bg-[url('https://ik.imagekit.io/sparxastronomy/LightBg.webp')];
-		@apply dark:bg-[url('https://ik.imagekit.io/sparxastronomy/DarkBg.webp?updatedAt=1691782909363')]
+		@apply bg-[url('/src/assets/LightBg.webp')];
+		@apply dark:bg-[url('/src/assets/DarkBg.webp')]
 	}
 
 	/* Animate the intro text class on pageload from bottom up */
