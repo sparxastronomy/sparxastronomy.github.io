@@ -3,6 +3,7 @@ import '../styles/tailwind.css';
 import BaseHead from '../components/head/BaseHead.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
 import BasicScript from '../components/core/BasicScript.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
 	seo?: BaseHeadProps;
@@ -24,12 +25,13 @@ const { seo } = Astro.props;
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous">
 		<!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" crossorigin="anonymous"></script> -->
 		<!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"  crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>  -->
+		<ViewTransitions/>
 	</head>
 	<body>
 		<BasicScript />
 		<slot name="announcement-bar" />
 		<slot name="header" />
-		<main id="content">
+		<main id="content" transition:animate="fade">
 			<slot />
 		</main>
 		<slot name="footer"/>
