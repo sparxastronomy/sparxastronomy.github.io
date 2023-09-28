@@ -39,7 +39,7 @@
 
 	// Check theme and menu on window load
 	window.addEventListener("DOMContentLoaded", () => themeCheck());
-	window.addEventListener("DOMContentLoaded", () => menuCheck());
+	// window.addEventListener("DOMContentLoaded", () => menuCheck());
 	// Check theme and menu on after swap
 	document.addEventListener("astro:after-swap", () => themeCheck());
 	document.addEventListener("astro:after-swap", () => menuCheck());
@@ -61,6 +61,9 @@
 		});
 
 	};
+
+	
+
 	// window.onpageshow = function () {
 	// 	menuCheck();
 	// };
