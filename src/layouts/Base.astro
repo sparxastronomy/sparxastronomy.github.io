@@ -3,6 +3,7 @@ import '../styles/tailwind.css';
 import BaseHead from '../components/head/BaseHead.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
 import BasicScript from '../components/core/BasicScript.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
 	seo?: BaseHeadProps;
@@ -19,17 +20,18 @@ const { seo } = Astro.props;
 		<BaseHead {...seo} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;800&display=swap" rel="stylesheet">
 		<!-- Loading Katex -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
 		<!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" crossorigin="anonymous"></script> -->
 		<!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"  crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>  -->
+		<ViewTransitions/>
 	</head>
 	<body>
 		<BasicScript />
 		<slot name="announcement-bar" />
 		<slot name="header" />
-		<main id="content">
+		<main id="content" transition:animate="slide({ duration: '0.6s' })">
 			<slot />
 		</main>
 		<slot name="footer"/>

@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-import image from "@astrojs/image";
 // import lit from "@astrojs/lit";
 import tailwind from "@astrojs/tailwind";
 import fs from "node:fs"
@@ -28,10 +27,11 @@ export default defineConfig({
 			theme: JSON.parse(fs.readFileSync("./houston.theme.json", { encoding: "utf-8" })),
 		},
   },
-
+  image:{
+    domains: ["ik.imagekit.io"],
+  },
   integrations: [
     sitemap(),
-    image(),
     tailwind({
 			config: {
 				applyBaseStyles: false,

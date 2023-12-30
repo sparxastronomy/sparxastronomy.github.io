@@ -8,6 +8,9 @@
 	/* @apply font-sans text-white; */
 	@apply font-sans bg-white dark:bg-black;
 }
+.prose{
+	max-width: 120ch;
+}
 
 @layer components {
 	.button {
