@@ -16,7 +16,7 @@
 	const menuCheck = () =>{
 		const elem = document.querySelector('[data-aw-toggle-menu]');
 		if (elem) {
-			elem.classList.remove('expanded');
+			elem.classList.remove('opened');
 		}
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('header')?.classList.remove('h-screen');
@@ -46,7 +46,7 @@
 
 	window.onload = function () {
 		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
-			elem.classList.toggle('expanded');
+			elem.classList.toggle('opened');
 			document.body.classList.toggle('overflow-hidden');
 			document.getElementById('header')?.classList.toggle('h-screen');
 			document.querySelector('#header nav')?.classList.toggle('hidden');
