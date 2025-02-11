@@ -3,14 +3,14 @@
         {
             "title": "MS Thesis: Effects of PopIII stars on Galaxy Formation and Evolution",
             "advisor": "Dr. Rahul Kannan, York University",
-            "date": "May, 2023 - Present",
+            "date": "May, 2023 - August, 2024",
             "summary": "Over the past decade, numerous works have refined the general picture of inhomogeneous metal enrichment and the transition to Pop II star formation. Understanding the details of Pop III formation is crucial for piecing together present-day galaxy formation. In this work I am building upon the previous works to create metal enrichment, thermo-chemistry and supernova feedback routines relevant for these early stars. Then using these routines and High-resolution N-Body simulation, we will study the effect of Pop III stars on the evolution of galaxies.",
             "more": false
         },
         {
             "title": "Independent study- Test of General Relativity using Gravitational Waves",
             "advisor": "Dr. Rajesh Kumble Nayak, IISER Kolkata",
-            "date": "Aug, 2023 - Present",
+            "date": "August - October, 2023",
             "summary": "This project is a part of my independent study courework in the 9th semster. In this prpject we want to test general relativity using Gravitational Waves. For this we want to detect the amplitude of multiple Post Newtonian(PN) parameters in graviatiaonal waves -  for the detection we are using the particle swarm optimization technique based on likelihood principle, which has been developed in-house at IISER - Kolkata.",
             "more": false
         },
@@ -27,7 +27,7 @@
             "date": "May - October, 2022",
             "summary": "I used high resolution NBody simulations - EAGLE and IllustrisTNG to investigate the effects of AGN feedback on large scale matter distribution using 2 and 3 point statistics. This study helped us understand the how the physics of subgrid manifest onto the large scale matter distribution and identify the statistics that are more responsive to these changes.",
             "more": true,
-            "moreLink": "/Paper1_Draft.pdf"
+            "moreLink": "https://doi.org/10.1093/mnras/stae2312"
         },
         {
             "title": "Summer project on Gravitational Waves",
