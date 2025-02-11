@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-// import lit from "@astrojs/lit";
 import tailwind from "@astrojs/tailwind";
 import fs from "node:fs"
 
@@ -11,6 +10,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 
+
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,24 +25,26 @@ export default defineConfig({
     // Can be 'shiki' (default), 'prism' or false to disable highlighting
     // syntaxHighlight: 'prism',
     shikiConfig: {
-			theme: JSON.parse(fs.readFileSync("./houston.theme.json", { encoding: "utf-8" })),
-		},
+            theme: JSON.parse(fs.readFileSync("./houston.theme.json", { encoding: "utf-8" })),
+        },
   },
   image:{
     domains: ["ik.imagekit.io"],
   },
   integrations: [
-    sitemap(),
+    sitemap(), 
     tailwind({
-			config: {
-				applyBaseStyles: false,
-			},
-		}),
+              config: {
+                  applyBaseStyles: false,
+              },
+            }), 
     mdx({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex,]
-      })
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex,]
+    }), 
+    icon(),
   ],
+  prefetch: true,
 
    vite: {
     ssr: {

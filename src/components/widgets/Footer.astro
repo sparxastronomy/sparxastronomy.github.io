@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import Logo from '../Logo.astro';
 import Button from './button.astro';
 
@@ -65,11 +65,11 @@ const social = [
                         <div class="mx-auto">
                             <ul class="space-y-6 flex-col font-porza">
                                 <li class="flex">
-                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7 my-auto" optimize={false} />
+                                    <Icon  name="tabler:chevrons-right" class="w-7 h-7 my-auto"/>
                                     <Button link='/BipradeepSaha_Curriculum_Vitae.pdf' label='Resume'></Button>
                                 </li>
                                 <li class="flex">
-                                    <Icon  name="ic:round-keyboard-double-arrow-right" class="w-7 h-7 my-auto" optimize={false} />
+                                    <Icon  name="tabler:chevrons-right" class="w-7 h-7 my-auto"/>
                                     <Button link='#' label='Publications'></Button>
                                 </li>
                             </ul>
