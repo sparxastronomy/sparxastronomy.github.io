@@ -4,12 +4,12 @@ import Button from './button.astro';
 const { item } = Astro.props;
 ---
 
-<div class="flex flex-col border-l-4 dark:border-sky-100">
+<div class="flex flex-col border-l-2 md:border-l-4 border-turst-400 dark:border-trust-100">
     <div class="flex flex-col relative before:absolute  before:top-[13px] before:w-4 before:h-4 before:rounded-full before:left-[-10px] before:z-1 before:bg-teal-400 before:dark:bg-violet-400 px-4 pb-8">
-        <p class="mb-0 text-xl md:text-2xl font-medium tracking-wide">{item.title}</p>
+        <p class="mb-0 text-xl md:text-2xl font-medium tracking-normal text-justify text-trust-700 dark:text-trust-200">{item.title}</p>
         <p class="my-2 text-base md:text-xl">{item.advisor}</p>
         <time class="text-xs tracking-wide uppercase dark:text-gray-400">{item.date}</time>
-        <p class="my-3 text-justify text-lg">{item.summary}</p>
+        <p class="my-3 text-justify text-base md:text-l">{item.summary}</p>
         { item.more && 
             <div class="font-porza">
                 <Button label="Read More" link={item.moreLink}/>
