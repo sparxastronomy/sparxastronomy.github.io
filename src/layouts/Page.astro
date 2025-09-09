@@ -1,9 +1,8 @@
 ---
-import Header from '../components/widgets/Header.astro';
+import Header from '../components/widgets/Navbar.astro';
 import Footer from '../components/widgets/Footer.astro';
 import Layout from './Base.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
-
 
 export interface Props {
 	seo?: BaseHeadProps;
@@ -14,10 +13,11 @@ const { seo } = Astro.props as Props;
 
 <Layout seo={seo}>
 	<Header />
+
 	<!-- Padding to avoid the header -->
 	<div class="noise-container pt-[65px] md:pt-[calc(10vh-4px)]">
 		<div class="noise"></div>
-		<hr class="border-astro-gray-500">
+		<!-- <hr class="border-astro-gray-500"> -->
 	</div>
 	
 	<!-- Slot for contents -->
