@@ -55,7 +55,7 @@ const seo = {
 				<time class="code text-astro-gray-400 dark:text-astro-gray-200" datetime={publishDate.toISOString()}>
 					{format(publishDate, "MMMM d, yyyy")}
 				</time>
-				<h1 class="heading-3 my-2 md:heading-2 sm:mb-5 sm:mt-3">{title}</h1>
+				<h1 class="font-emphasis heading-3 my-2 md:heading-2 sm:mb-5 sm:mt-3">{title}</h1>
 				<div class="code flex flex-wrap items-center justify-center gap-4 text-astro-gray-400 dark:text-astro-gray-200">
 					{
 						tags.map((tag) => {
@@ -69,7 +69,7 @@ const seo = {
 				</div>
 			</header>
 			<hr class="-mx-16 my-8 border-astro-gray-200 dark:border-astro-gray-500" />
-			<article class="prose text-justify px-4 font-sans">
+			<article class="prose text-justify px-4 font-blog">
 					<Content />
 			</article>
 		</div>

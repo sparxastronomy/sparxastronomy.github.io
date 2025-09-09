@@ -46,8 +46,9 @@ module.exports = {
 				"astro-hover": "#E8C4F9",
 			},
 			fontFamily: {
-				sans: ["'Nunito'", ...defaultTheme.fontFamily.sans],
-				porza: "'Proza Libre', sans-serif",
+				sans: ["'Inclusive Sans'", ...defaultTheme.fontFamily.sans], // no fontWeight here
+				emphasis: ["'Bodoni Moda'", 'serif'],
+				blog: ["'Livvic'", 'sans-serif'],
 			},
 			backgroundImage: {
 				"blue-purple-gradient": "linear-gradient(83.21deg, #3245FF 0%, #B845ED 100%)",
@@ -170,31 +171,31 @@ module.exports = {
 				},
 
 				".heading-1": {
-					"@apply font-sans text-7xl leading-tight": {},
+					"@apply text-7xl leading-tight": {},
 				},
 
 				".heading-2": {
-					"@apply font-sans text-6xl leading-tight": {},
+					"@apply text-6xl leading-tight": {},
 				},
 
 				".heading-3": {
-					"@apply font-sans text-4xl leading-tight": {},
+					"@apply text-4xl leading-tight": {},
 					fontSize: "32px",
 				},
 
 				".heading-4": {
-					"@apply font-sans text-2xl leading-tight": {},
+					"@apply text-2xl leading-tight": {},
 				},
 
 				".heading-5": {
-					"@apply font-sans text-xl leading-tight": {},
+					"@apply text-xl leading-tight": {},
 				},
 
 				".body": {
-					"@apply font-sans text-base font-light": {},
+					"@apply text-base font-light": {},
 				},
 				".body-large": {
-					"@apply font-sans text-2xl font-extralight leading-normal": {},
+					"@apply text-2xl font-extralight leading-normal": {},
 				},
 
 				".code": {
@@ -256,7 +257,7 @@ module.exports = {
 						"colors.astro-gray.100",
 					)} 1px, transparent 1px)`,
 					backgroundPosition: "top center",
-					imageRendering: "pixelated",	
+					imageRendering: "pixelated",
 					// https://stackoverflow.com/a/9670876/1332403
 					maskImage: `linear-gradient(to bottom, transparent, 5%, white, 95%, transparent)`,
 				},
@@ -269,7 +270,7 @@ module.exports = {
 						"colors.astro-gray.600",
 					)} 1px, transparent 1px)`,
 					backgroundPosition: "top center",
-					imageRendering: "pixelated",	
+					imageRendering: "pixelated",
 					// https://stackoverflow.com/a/9670876/1332403
 					maskImage: `linear-gradient(to bottom, transparent, 10%, white, 90%, transparent)`,
 				},
@@ -287,5 +288,5 @@ module.exports = {
 			})
 		}),
 	],
-	
+
 };

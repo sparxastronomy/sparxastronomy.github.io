@@ -1,12 +1,10 @@
 ---
-import { Icon } from 'astro-icon';
-
 const { link, label } = Astro.props
 ---
 
 <div class="button mx-0 px-3">
     <div class="button-container">
-        <a href={link} aria-label={label} class="group inline-flex rounded-full font-medium text-black dark:text-white h-[40px] ">
+        <a href={link} aria-label={label} class="group inline-flex rounded-full text-black dark:text-white h-[40px] ">
         <p class="my-auto">
             {label}
         </p>
