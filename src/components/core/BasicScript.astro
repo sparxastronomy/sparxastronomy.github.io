@@ -1,67 +1,91 @@
 ---
 ---
-
 <script is:inline>
-	// Definig the function to attach event to the element
-	function attachEvent(selector, event, fn) {
-		const matches = document.querySelectorAll(selector);
-		if (matches && matches.length) {
-			matches.forEach((elem) => {
-				elem.addEventListener(event, () => fn(elem), false);
-			});
-		}
+function attachEvent(selector, event, fn) {
+	const matches = document.querySelectorAll(selector);
+	if (matches && matches.length) {
+		matches.forEach((elem) => {
+			elem.removeEventListener(event, elem._attachedFn, false);
+			elem._attachedFn = () => fn(elem);
+			elem.addEventListener(event, elem._attachedFn, false);
+		});
 	}
+}
 
-	// Defining the function to check if the menu is open
-	const menuCheck = () =>{
-		const elem = document.querySelector('[data-aw-toggle-menu]');
-		if (elem) {
-			elem.classList.remove('opened');
-		}
+// Hamburger and menu logic
+function menuCheck() {
+	const elem = document.querySelector('[data-aw-toggle-menu]');
+	const nav = document.getElementById('header-nav-mobile');
+	if (elem && nav) {
+		elem.classList.remove('opened');
 		document.body.classList.remove('overflow-hidden');
-		document.getElementById('header')?.classList.remove('h-screen');
-		document.querySelector('#header nav')?.classList.add('hidden');
-		return;
+		nav.classList.add('hidden');
+		// Reset nav links animation
+		nav.querySelectorAll('.navlink-item').forEach((li) => {
+			li.classList.remove('show');
+		});
 	}
+}
 
-	// Defining the function to check and set the theme
-	const themeCheck = () =>{
-		if (
+// Theme logic
+const themeCheck = () => {
+	if (
 		localStorage.theme === 'dark' ||
 		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark');
-			} else {
-			document.documentElement.classList.remove('dark');
-			}
-		return;
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
 	}
+};
 
-	// Check theme and menu on window load
-	window.addEventListener("DOMContentLoaded", () => themeCheck());
-	// window.addEventListener("DOMContentLoaded", () => menuCheck());
-	// Check theme and menu on after swap
-	document.addEventListener("astro:after-swap", () => themeCheck());
-	document.addEventListener("astro:after-swap", () => menuCheck());
+function setupHeaderEvents() {
+	attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
+    const nav = document.getElementById('header-nav-mobile');
+    const opened = elem.classList.toggle('opened');
+    document.body.classList.toggle('overflow-hidden', opened);
 
-	window.onload = function () {
-		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
-			elem.classList.toggle('opened');
-			document.body.classList.toggle('overflow-hidden');
-			document.getElementById('header')?.classList.toggle('h-screen');
-			document.querySelector('#header nav')?.classList.toggle('hidden');
+    if (nav) {
+      if (opened) {
+        nav.classList.remove('hidden');
+        // Animate nav links in
+        const items = nav.querySelectorAll('.navlink-item');
+        items.forEach((li, i) => {
+          setTimeout(() => {
+            li.classList.add('show');
+          }, i * 60);
+        });
+      } else {
+        // Animate nav links out
+        const items = nav.querySelectorAll('.navlink-item');
+        items.forEach((li, i) => {
+          setTimeout(() => {
+            li.classList.remove('show');
+          }, i * 40);
+        });
+        setTimeout(() => nav.classList.add('hidden'), 300);
+      }
+    }
+  });
+	attachEvent('[data-aw-toggle-theme]', 'click', function () {
+		document.documentElement.classList.toggle('dark');
+		localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+	});
+}
 
-			// Close menu if open
-			// document.getElementById('toggle-menu-icon-open')?.classList.toggle('hidden');
-			// document.getElementById('toggle-menu-icon-close')?.classList.toggle('hidden');
-		});
-		attachEvent('[data-aw-toggle-theme]', 'click', function () {
-			document.documentElement.classList.toggle('dark');
-			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-		});
+window.addEventListener('DOMContentLoaded', () => {
+	themeCheck();
+	setupHeaderEvents();
+});
 
-	};
+document.addEventListener('astro:after-swap', () => {
+	themeCheck();
+	setupHeaderEvents();
+	menuCheck();
+});
 </script>
+
+<!-- Init Lenis -->
 <script>
 	// Lenis configuration
 	import Lenis from "lenis";
