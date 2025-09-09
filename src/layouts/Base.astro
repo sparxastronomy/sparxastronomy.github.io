@@ -32,7 +32,7 @@ const { seo } = Astro.props;
 		<BasicScript />
 		<slot name="announcement-bar" />
 		<slot name="header" />
-		<main id="content" transition:animate="slide" transition:animate-duration="1.2s">
+		<main id="content" transition:animate="fade" transition:animate-duration="1.2s">
 			<slot />
 		</main>
 		<slot name="footer"/>

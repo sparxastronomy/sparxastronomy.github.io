@@ -1,0 +1,35 @@
+---
+import Logo from '../Logo.astro';
+import ToggleTheme from '../core/ToggleTheme.astro';
+import ToggleMenu from  '../core/ToggleMenu.astro';
+import NavLinks from './NavLinks.astro';
+
+const navItems = [
+  { name: "About", url: "/#about" },
+  { name: "Research", url: "/work" },
+  { name: "Captures", url: "/captures" }
+];
+
+// Astro.url.pathname gives the current path
+const currentPath = Astro.url.pathname;
+---
+<header id="header">
+  <div class="fixed flex z-40 top-4 left-1/2 transform -translate-x-1/2 px-1 py-1 justify-between items-center bg-opacity-10 backdrop-filter backdrop-blur-[72px] min-w-[300px] md:min-w-[760px] lg:min-w-[1000px] w-auto border-[1px] border-gray-400 dark:border-gray-500 rounded-[40px]">
+    <a class="flex items-center" href='/'>
+      <Logo />
+    </a>
+
+    <!-- Mobile -->
+    <div class="flex items-center md:hidden">
+      <ToggleTheme />
+      <ToggleMenu />
+      <NavLinks id="header-nav-mobile" {currentPath} {navItems} />
+    </div>
+
+    <!-- Desktop -->
+    <div class="hidden md:flex items-center gap-0">
+      <NavLinks id="header-nav-desktop" {currentPath} {navItems} />
+      <ToggleTheme/>
+    </div>
+  </div>
+</header>
