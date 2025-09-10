@@ -1,22 +1,11 @@
 ---
-import { getCollection } from "astro:content"
-import { parse, isBefore } from 'date-fns';
 import Layout from '../../layouts/Page.astro';
-import PostBox from '../../components/widgets/postBox.astro';
 import ResearchTimelineHero from '../../components/sections/heros/ResearchTimelineHero.astro';
 
+// import PostBox from '../../components/widgets/postBox.astro';
+// import { parse, isBefore } from 'date-fns';
 
-// export const prerender = true;
-
-export async function getStaticPaths() {
-	const allPosts = await getCollection("work");
-	return allPosts.map((post) =>({
-		params: { slug: post.slug },
-		props: { post },
-	}));
-}
-
-const allPosts = await getCollection("work");
+export const prerender = false;
 
 
 const seo = {
@@ -33,7 +22,7 @@ const seo = {
 			<!-- Research landing hero -->
 			<div class="bg-grid dark:bg-grid-dark flex flex-col text-center py-[2em] pb-[3em]">
 				<div class="w-4/5 md:w-2/3 mx-auto">
-					<h2 class="text-center heading-3 md:heading-2 font-sans text-sky-700 dark:text-sky-400 tracking-wide"> Welcome World!</h2>
+					<h2 class="text-center heading-3 md:heading-2 font-emphasis text-sky-700 dark:text-sky-400 tracking-wide"> Welcome World!</h2>
 					<div class="text-l md:text-2xl pt-4">
 						<p class="text-justify">
 							Here you can find all my research and projects. I am currently working of understanding turbulance in the Inter Cluster Medium across different gas phases using cosmological hydrodynamical simulations.  I will be updating this page as I progress. You can also find my previous project and experieces below.
@@ -48,23 +37,6 @@ const seo = {
 
 		<!-- Timeline for projects -->
 			<ResearchTimelineHero/>
-
-			<!-- Display post under Research sections -->
-			<hr class="-mx-16 my-7" />
-			<div class="py-6 flex flex-col justify-center items-center">
-				<p class="mx-auto w-3/4 text-center text-[1.5em] md:text-[1.8rem] tracking-wide font-sans font-semibold">
-					Detailed information about some of my project works
-				</p>
-				<ul class="justify-center items-center text-center text-xl">
-					{
-						allPosts.map((post) => (
-							<li class="py-5">
-								<PostBox url={'/work/' +  post.slug} post={post} />
-								</li>
-								))
-					}
-				</ul>
-			</div>
 		</div>
 	</div>
 </Layout>

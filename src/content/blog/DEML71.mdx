@@ -8,7 +8,7 @@ tags:
   - Supernova
 ---
 
-import Picture from '../../components/widgets/blogImage.astro'
+import Picture from '~/components/widgets/blogImage.astro'
 
 ## Overview
 DEM L71 is a Type-1a Supernova(SN) which is a rich Iron(Fe). Proof of Hydrogen were also found as $H-\alpha$ emission were observed. Type-1a SNs are very essential in Astronomy as they act as the standard candles. Being rich in Iron and a Type-1a SN, its most likely that this SNR is due to death of a White-Dwarf star.
@@ -27,15 +27,15 @@ First, the data is splited to various channel based on the energy distribution  
 
 
 <Picture src="https://ik.imagekit.io/sparxastronomy/DEML71/DEML71_xray.png"
-         srcset = "https://ik.imagekit.io/sparxastronomy/tr:w-400,lo-true/DEML71/DEML71_xray.png 400w, https://ik.imagekit.io/sparxastronomy/tr:w-500,lo-true/DEML71/DEML71_xray.png 600w"
          alt="DEML71 in X-ray spectrum." 
-         sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, 600px"/>
+         
+         />
 
 Then this image is smoothened using a [gaussian kernel](https://cxc.cfa.harvard.edu/ciao/ahelp/csmooth.html) on each of the three channels (parameters: $\sigma_{min}=3, \sigma_{max}=4$). **NOTE**: this step doesn't improves the SNR of the data, but rather makes morpohological studies easier.
 
 <Picture src="https://ik.imagekit.io/sparxastronomy/DEML71/DEML71_xray-smooth.png"
-         srcset = "https://ik.imagekit.io/sparxastronomy/tr:w-400,lo-true/DEML71/DEML71_xray-smooth.png 400w,https://ik.imagekit.io/sparxastronomy/tr:w-500,lo-true/DEML71/DEML71_xray-smooth.png 600w"     alt="DEML71 in X-ray spectrum with gaussian smoothing." 
-         sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, 600px" />
+         alt="DEML71 in X-ray spectrum with gaussian smoothing." 
+         />
 
 In both the images, one can clearly observe the double shock morphologies, and infact this is a text-book example of double shocks in SNR. The supersonic Forward shock(FS) is driven by the explosion. On the either side of the forward shock there is interstellar medium(ISM). Behind the FS, the shocked ISM keeps accumulating, along with the ejected materials from the star. The freely expanding ejecta pushes on to the shocked ISM, and a contact discontinuity arises due to density difference between the ISM and the ejecta. As a result, the ejecta never reaches the FS, but instead there is a huge pressure build up behind the FS, which drives the Reverse Shock(RS) by pushing back onto the unshocked ejecta. The RS compresses the unshocked ejected heating the remaining ejecta. The heated freely expanding ejecta is seen in aqua-green color here and one can clearly observe the separation between ejecta and the shockwave.
 
@@ -62,7 +62,7 @@ $$
 $$
 
 Since the counts is low, to fit the data, both Chi-square and CStat are used. Then we select the model with lower $Q$ value. The fitted data is as follows.
-<Picture src="https://ik.imagekit.io/sparxastronomy/DEML71/DEML71_Spectra_CentralRegion.jpg.jpg"
+<Picture src="https://ik.imagekit.io/sparxastronomy/DEML71/DEML71_Spectra_CentralRegion.jpg"
          srcset = "https://ik.imagekit.io/sparxastronomy/tr:w-500/DEML71/DEML71_Spectra_CentralRegion.jpg 500w,https://ik.imagekit.io/sparxastronomy/tr:w-1100/DEML71/DEML71_Spectra_CentralRegion.jpg 1100w"
          alt="Fitted Xray spectrum of DEML71(central region)" 
          sizes="(max-width: 500px) 500px, (max-width: 1100px) 1100px, 1100px" />
@@ -81,7 +81,7 @@ $$
     \end{align*}
 $$
 
-Thus the model is in good agreement with the data. The values even though differs slightly from what was previously obtained the values obtained are within $3\sigma$ limit. Just to have an idea of how hot the plasma is, the obtained components translates back to $\approx 2.43, 8.54~ \mathbf{Million}^\circ K$. Its really very very hot!!       
+Thus the model is in good agreement with the data. The values even though differs slightly from what was previously obtained the values obtained are within $3\sigma$ limit. Just to have an idea of how hot the plasma is, the obtained components translates back to $\approx 2.43, 8.54 \times {\rm 10^6~K}$. Its really very very hot!!       
 The good agreement of the raymond model suggest that the plasma is not so dense and is rather diffused.     
 *The model also misses some hard emission lines beyond 4 keV* and is most likely because of higher uncertainty in the data beyond 4 keV.      
 The data was also fitted with non-equilibrium, collisional plasma models and in that case, the fit was satisfactory, although this doesn't suggest that the plasma is in equilibrium
