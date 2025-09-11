@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Page.astro';
+import ResearchTimelineHero from '../../components/sections/heros/ResearchTimelineHero.astro';
+
+// import PostBox from '../../components/widgets/postBox.astro';
+// import { parse, isBefore } from 'date-fns';
+
+// export const prerender = false;
+
+
+const seo = {
+	title: 'Research | Sparxastronomy',
+	description: 'Research and Projects by Bipradeep',
+};
+---
+
+<Layout {seo}>
+	<!-- div wrapping the contents -->
+	<div class="grid-container md:z-10">
+		<div class="bleed-full">
+
+			<!-- Research landing hero -->
+			<div class="bg-grid dark:bg-grid-dark flex flex-col text-center py-[2em] pb-[3em]">
+				<div class="w-4/5 md:w-2/3 mx-auto">
+					<h2 class="text-center heading-3 md:heading-2 font-emphasis text-sky-700 dark:text-sky-400 tracking-wide"> Welcome World!</h2>
+					<div class="text-l md:text-2xl pt-4">
+						<p class="text-justify">
+							Here you can find all my research and projects. I am currently working of understanding turbulance in the Inter Cluster Medium across different gas phases using cosmological hydrodynamical simulations.  I will be updating this page as I progress. You can also find my previous project and experieces below.
+							<br>
+						</p>
+						<p class="text-center">
+							Feel free to reach out if you want to know more or want to collaborate 🙂
+						</p>
+					</div>
+				</div>
+			</div>
+
+		<!-- Timeline for projects -->
+			<ResearchTimelineHero/>
+		</div>
+	</div>
+</Layout>
+

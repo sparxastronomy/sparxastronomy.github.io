@@ -4,11 +4,9 @@ import { format } from "date-fns";
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 
-// export const prerender = true;
-
 
 export async function getStaticPaths() {
-	const work = await getCollection('work');
+	const work = await getCollection('blog');
 	return work.map((entry) => ({
 		params: { slug: entry.slug },
 		props: { entry },
@@ -19,7 +17,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const { title, description, publishDate, featuredImage, excerpt, tags } = entry.data;
-const canonicalURL: string = '/work/' + entry.slug.toString();
+const canonicalURL: string = '/blog/' + entry.slug.toString();
 
 const seo = {
 	title,
@@ -53,9 +51,9 @@ const seo = {
 			<div class="noise"></div>
 			<header class="mx-auto w-full max-w-prose text-center">
 				<time class="code text-astro-gray-400 dark:text-astro-gray-200" datetime={publishDate.toISOString()}>
-					{format(publishDate, "MMMM d, yyyy")}
+					{format(publishDate, "MMMM dd, yyyy")}
 				</time>
-				<h1 class="heading-3 my-2 md:heading-2 sm:mb-5 sm:mt-3">{title}</h1>
+				<h1 class="font-emphasis heading-3 my-2 md:heading-2 sm:mb-5 sm:mt-3">{title}</h1>
 				<div class="code flex flex-wrap items-center justify-center gap-4 text-astro-gray-400 dark:text-astro-gray-200">
 					{
 						tags.map((tag) => {
@@ -69,7 +67,7 @@ const seo = {
 				</div>
 			</header>
 			<hr class="-mx-16 my-8 border-astro-gray-200 dark:border-astro-gray-500" />
-			<article class="prose text-justify px-4 font-sans">
+			<article class="prose text-justify px-4 font-blog">
 					<Content />
 			</article>
 		</div>

@@ -1,21 +1,25 @@
 ---
-const { src, srcset, alt, aspectRatio, sizes } = Astro.props;
+import { Image } from "astro:assets";
+import { inferRemoteSize } from 'astro:assets';
+
+const { src, alt } = Astro.props;
+// const { width, height } = await inferRemoteSize(src);
+
+// Function to generate srcset for responsive images
+// Transformation is already carried out by remote endpoint
 ---
 
-<div class="flex flex-col items-center justify-center my-4">
-  <div class="rounded-lg overflow-hidden my-2">
-    <!-- <Picture
-      src= {src}
-      alt={alt}
-      widths={widths}
-      aspectRatio={aspectRatio}
-      quality={100}
-      sizes={sizes}
-    /> -->
-    <img src={src}
+<div class="flex flex-col items-center justify-center mx-auto my-2 w-[300px] md:w-[540px] lg:w-[720px]">
+  <div class="rounded-lg overflow-hidden">
+    <Image 
+         src={src}
          alt={alt}
-         srcset={srcset}
-         sizes={sizes}>
+         inferSize
+         widths={[240, 540, 720]}
+         sizes="(max-width: 360px) 300px, (max-width: 720px) 540px, (max-width: 1600px) 720px}"
+         decoding="async"
+         loading="lazy"
+    />
   </div>
-  <p class="font-normal font-sans text-sm">{alt}</p>
+  <p class="font-normal font-sans text-sm mt-1 mx-2">{alt}</p>
 </div>

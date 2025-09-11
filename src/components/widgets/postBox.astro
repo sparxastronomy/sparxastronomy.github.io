@@ -1,15 +1,60 @@
 ---
 import { Icon } from 'astro-icon/components';
-
+import { Image } from 'astro:assets';
+import Button from './button.astro';
 const {url, post} = Astro.props;
 ---
+<style>
+.post-box {
+    position: relative;
+    @apply rounded-[20px] border-0;
+    overflow: hidden;
+    transition: background 0.3s;
+    background: linear-gradient(to bottom, #f8fafc, #e0e7ef);
+    @apply dark:bg-gradient-to-b dark:from-[#1e293b] dark:to-[#334155];
+}
 
-<!-- Rounded box with image -->
+.post-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    border: 3px solid #4f8bda;
+    /* Animate the border drawing from the bottom edge */
+    clip-path: inset(100% 0% 0% 0% round 20px);
+    transition:
+      clip-path 0.5s cubic-bezier(.5,1.8,.5,1.15),
+      border-color 0.3s;
+    z-index: 2;
+    opacity: 1;
+}
+
+.post-box:hover::before {
+    clip-path: inset(0% 0% 0% 0% round 20px);
+    border-color: #4f8bda;
+}
+
+@media (prefers-color-scheme: dark) {
+    .post-box::before {
+        border-color: #639ab0;
+    }
+    .post-box:hover::before {
+        border-color: #639ab0;
+    }
+}
+</style>
+
 <a href={url}>
-    <div class="z-50 mx-auto dark:border-slate-600 bg-gradient-to-b from-green-50 dark:from-slate-800  dark:via-blue-300/30 dark:to-blue-400/30 to-blue-100 w-4/5 md:w-3/4 rounded-[1.25rem] shadow-md hover:shadow-lg hover:-translate-y-[0.1em] animation hover:shadow-stone-400 dark:hover:shadow-[#639ab0] duration-300 border-1 overflow-hidden">
+    <div class="post-box w-4/5 md:w-3/4 mx-auto">
         <div class="flex flex-col md:flex-row px-2 py-2 justify-between items-center">
             <div class="overflow-hidden rounded-xl">
-                <img src={post.data.featuredImage} alt={post.data.title} class="rounded-xl"/>
+                <Image 
+                    src={post.data.featuredImage} 
+                    alt={post.data.title}
+                    sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw" inferSize 
+                    class="transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)]"
+                />
             </div>
             <div class="flex-col text-center font-sans px-2 py-2">
                 <p class="heading-3 text-trust-900 dark:text-sky-300">
@@ -18,28 +63,8 @@ const {url, post} = Astro.props;
                 <p class="text-justify my-2 md:px-4 font-light text-base md:text-l">
                     {post.data.excerpt}
                 </p>
-                <!-- Read More Button -->
-                <a href={url} class="group inline-flex rounded-full bg-slate-800 text-sm dark:bg-slate-100 text-white dark:text-black px-4 py-2 my-5">
-                    Read more
-                    <svg class="hidden md:flex mt-[0.42em] ml-2 -mr-2 stroke-[2px] stroke-white dark:stroke-midnight" fill="none" width="20" height="20" viewBox="0 0 15 15" aria-hidden="true">
-                        <path class="transition opacity-0 group-hover:opacity-100" d="M0 5h7"></path>
-                        <path class="transition group-hover:translate-x-[3px]" d="M1 1l4 4-4 4"></path>
-                    </svg>
-                    <div class="flex items-center justify-center ml-2 md:hidden animate-pulse">
-                        <Icon name="tabler:hand-click" class='w-4 h-4 md:w-6 md:h-6' />
-                    </div>
-                </a>
+                <Button link={url} label="Read More" />
             </div>  
         </div>
-        <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-blue-300 dark:via-blue-600 to-transparent"></div>
     </div>
-</a>    
-
-<style>
-    /* Auto resize the image */
-    img {
-        width: 100%;
-        height: auto;
-        max-width: 700px;
-    }
-</style>
+</a>

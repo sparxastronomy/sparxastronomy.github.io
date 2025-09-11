@@ -16,7 +16,7 @@ const getIsActive = (item) => {
          rounded-[35.5px] md:rounded-none py-2 md:py-0
          border-[1.5px] md:border-0 border-black-200 dark:border-gray-700"
 >
-  <ul class="flex flex-col md:flex-row gap-6 md:gap-4 px-4 py-4 md:py-0 md:px-0 w-full h-auto">
+  <ul class="flex flex-col md:flex-row gap-6 md:gap-4 px-4 py-4 md:py-0 md:px-0 w-full h-auto items-center md:items-start">
     {navItems.map((item, i) => (
       <li
         style={`transition-delay: ${i * 60}ms;`}
@@ -25,10 +25,8 @@ const getIsActive = (item) => {
         <a
           href={item.url}
           class={`relative px-2 py-2 rounded-[24px] font-semibold text-base transition
-            ${getIsActive(item)
-              ? "bg-gradient-to-b from-blue-400 to-blue-700 shadow-3d text-white border border-blue-700"
-              : "bg-transparent text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-800 hover:text-blue-700"
-            }`}
+            ${getIsActive(item) ? "nav-btn-active" : "nav-btn-inactive"}
+          `}
           aria-current={getIsActive(item) ? "page" : undefined}
         >
           {item.name}
@@ -48,6 +46,43 @@ const getIsActive = (item) => {
 </style>
 
 <style>
+/* ACTIVE BUTTON STYLE */
+.nav-btn-active {
+  @apply relative px-2 py-2 rounded-[2px] font-semibold text-black dark:text-white cursor-default transition-none;
+  /* @apply bg-gradient-to-b from-blue-400 to-blue-700; */
+}
+
+/* Minimal bottom border with gradient for active */
+.nav-btn-active::after {
+  content: "";
+  @apply absolute left-0 bottom-0 w-full h-[4.5px] rounded-[2px];
+  background: linear-gradient(90deg, #60a5fa 0%, #1e3a8a 100%);
+  opacity: 0.75;
+  blur: 32px;
+}
+
+/* INACTIVE BUTTON STYLE */
+.nav-btn-inactive {
+  @apply relative px-2 py-2 rounded-[24px] font-semibold text-base text-gray-700 dark:text-gray-200 bg-transparent cursor-pointer transition-colors duration-300;
+  /* No border by default */
+  border: none;
+  outline: none;
+}
+
+/* Animated gradient border on hover (minimal, only bottom) */
+.nav-btn-inactive::after {
+  content: "";
+  @apply absolute left-0 bottom-0 w-full h-[3px] rounded-[4px] transition-all duration-300;
+  background: linear-gradient(90deg, #4fd1c5 0%, #818cf8 80%);
+  opacity: 0;
+}
+
+/* Show border on hover */
+.nav-btn-inactive:hover::after,
+.nav-btn-inactive:focus::after {
+  opacity: 1;
+}
+
 /* Animation for mobile nav links */
 .navlink-item {
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);

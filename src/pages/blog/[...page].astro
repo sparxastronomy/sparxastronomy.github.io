@@ -1,0 +1,80 @@
+---
+import type { GetStaticPathsOptions, Page } from 'astro';
+import { getCollection } from "astro:content"
+
+import Layout from '~/layouts/Page.astro';
+import PostBox from '~/components/widgets/postBox.astro';
+import Pagination from '~/components/Pagination.astro';
+import type { CollectionEntry } from 'astro:content';
+
+// export const prerender = true;
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+	const allPosts = await getCollection("blog");
+	const sortedPosts = allPosts.sort(
+		(a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime(),
+	);
+	// return sortedPosts.map((post) =>({
+	// 	params: { slug: post.slug },
+	// 	props: { post },
+	// }));
+
+	return paginate(sortedPosts, { pageSize: 12 });
+}
+
+const { page } = Astro.props as {
+	page: Page<CollectionEntry<'blog'>>;
+};
+
+const allPages = [...Array(page.lastPage).keys()].map((num) => {
+	return `/blog${num === 0 ? '' : `/${String(num + 1)}`}`;
+});
+
+const allPosts = await getCollection("blog");
+
+const seo = {
+	title: 'Blogs | Sparxastronomy',
+	description: 'Blogs by Bipradeep',
+};
+---
+
+
+<Layout {seo}>
+	<!-- div wrapping the contents -->
+	<div class="noise-underlay inset-0">
+		<!-- Research landing hero -->
+		<div class="w-full bg-grid dark:bg-grid-dark flex flex-col text-center py-[2em] pb-[3em]">
+			<div class="w-4/5 md:w-2/3 mx-auto pt-2">
+				<h2 class="heading-3 md:heading-2 font-emphasis text-sky-700 dark:text-sky-400"> Welcome world!</h2><br>
+				<div class="font-sans text-xl md:text-2xl">
+					<p class="text-justify">
+						To my corner of the internet where I write about my research, projects and other random stuff related to astrophysics, High-performance computing and programming.
+						<br>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Similar to Research timeline -->
+		 <!-- Display post under Research sections -->
+			<hr class="my-4" />
+			<div class="py-6 flex flex-col justify-center items-center">
+				<p class="mx-auto w-3/4 text-center text-[1.5em] md:text-[1.8rem] tracking-wide font-blog font-semibold">
+					BLOGS
+				</p>
+				<ul class="justify-center items-center text-center text-xl">
+					{
+						page.data.map((post, index) => (
+							<li class="py-5">
+								<PostBox url={'/blog/' +  post.slug} post={post} />
+							</li>
+						))
+					}
+				</ul>
+
+				<Pagination restRoute allPages={allPages} page={page} class="mx-auto" />
+
+			</div>
+	</div>
+</Layout>
+

@@ -7,6 +7,7 @@ import NavLinks from './NavLinks.astro';
 const navItems = [
   { name: "About", url: "/#about" },
   { name: "Research", url: "/work" },
+  { name: "Blogs", url: "/blog" },
   { name: "Captures", url: "/captures" }
 ];
 
@@ -27,7 +28,7 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Desktop -->
-    <div class="hidden md:flex items-center gap-0">
+    <div class="hidden md:flex items-center gap-2">
       <NavLinks id="header-nav-desktop" {currentPath} {navItems} />
       <ToggleTheme/>
     </div>
