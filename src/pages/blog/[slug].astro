@@ -4,8 +4,6 @@ import { format } from "date-fns";
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 
-// export const prerender = true;
-
 
 export async function getStaticPaths() {
 	const work = await getCollection('blog');
@@ -53,7 +51,7 @@ const seo = {
 			<div class="noise"></div>
 			<header class="mx-auto w-full max-w-prose text-center">
 				<time class="code text-astro-gray-400 dark:text-astro-gray-200" datetime={publishDate.toISOString()}>
-					{format(publishDate, "MMMM d, yyyy")}
+					{format(publishDate, "MMMM dd, yyyy")}
 				</time>
 				<h1 class="font-emphasis heading-3 my-2 md:heading-2 sm:mb-5 sm:mt-3">{title}</h1>
 				<div class="code flex flex-wrap items-center justify-center gap-4 text-astro-gray-400 dark:text-astro-gray-200">
