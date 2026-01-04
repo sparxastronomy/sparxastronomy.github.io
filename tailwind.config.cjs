@@ -47,7 +47,7 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ["'Inclusive Sans'", ...defaultTheme.fontFamily.sans], // no fontWeight here
-				emphasis: ["'Bodoni Moda'", 'serif'],
+				emphasis: ["'Italiana'", 'serif'],
 				blog: ["'Livvic'", 'sans-serif'],
 			},
 			backgroundImage: {

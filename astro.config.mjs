@@ -45,7 +45,10 @@ export default defineConfig({
     }),
     icon(),
   ],
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport'
+  },
 
   vite: {
     ssr: {

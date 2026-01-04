@@ -1,5 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
+import Bars from '../../Bars.astro';
+import svgArrow from '../../../assets/arrow.svg';
+import svgString from '../../../assets/string.svg';
+import AnimatedButton from '../../widgets/AnimatedButton.astro';
 
 const language_skills =[
 	{ label: 'Python', level: 'Advance', icon: 'tabler:brand-python'},
@@ -31,20 +34,68 @@ const py_stack =[
 <!-- This is the component to be used in home page. Design it using tail wind -->
 <homehero id="homehero" class="z-10 flex flex-col w-full pb-20">
 	<div class="relative">
-		<div class="home-graphic">
+		<div class="home-graphic max-w-screen-4xl mx-auto h-full">
 		<!-- <div class="home-background -translate-y-[10vh]"> -->
-			<div class="flex flex-col justify-center items-center h-full backdrop-filter backdrop-blur-[0.75em]">
+			<div class="grid grid-cols-1 md:grid-cols-[60%_40%] items-center pt-24 backdrop-filter backdrop-blur-[0.75em] px-4 md:px-16 lg:px-48 2xl:px-64 h-full">
 				<!-- <div class="intro-text hidden"> -->
-				<div>	
+				<!-- <div>	
 					<div class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-5xl font-extrabold md:text-6xl font-emphasis text-transparent text-center">
 						BIPRADEEP SAHA
 					</div>
 					<div class="mt-4 font-blog text-2xl text-center mx-auto w-4/5 sm:w-3/4 text-black dark:text-astro-gray-100">
 						PhD Student, Passionate about Computational Astrophysics and Quantitative Finance
 					</div>
-				</div>
+				</div> -->
+				<!-- <h1>Test text</h1> -->
+
+				<div class="flex flex-col gap-4 pr-0 md:pr-12">
+          <!-- <img src={svgheroContent.src} alt="logo" width="80" /> -->
+
+            <h1 class="text-4xl md:text-5xl font-medium">
+              <span>I build </span>
+              <span class="relative">
+                <span class="absolute bg-amber-100 dark:bg-amber-600 w-full h-[40%] left-0 bottom-0 z-1"></span>
+                <span class="relative z-5">galaxies</span>
+              </span>
+            </h1>
+            <p class="text-xl">PhD Student, Passionate about Computational Astrophysics and Quantitative Finance</p>
+           <div class="flex mt-1 lg:mt-10 xl:mt-16 mx-auto -translate-x-2">
+             <AnimatedButton 
+							 text="See Research" 
+							 href="/work" 
+							 lineColor="#00135c" 
+							 darklineColor="#7f98e3"
+							 backColor="#fef3c7" 
+							 darkBackColor="#fef3c7"/>
+           </div>
+        </div>
+
+
+				<div class="relative mt-20 md:mt-0">
+          <div class="flex absolute -top-20 left-0 z-10">
+            <!-- name with smile icon -->
+            <div class="flex transform -rotate-12 translate-y-3">
+              <svg class="size-5" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.5479 4.4031C18.6713 5.80238 19.9271 9.81219 21.7001 11.2897C23.0602 12.3947 24.0665 11.888 24.3315 9.94798C24.6359 7.90326 23.1377 5.00064 21.4323 4.27109C20.1328 3.70088 19.9764 3.72964 19.5479 4.4031Z" fill="black"/>
+                <path d="M7.84038 5.33376C6.96374 6.73304 8.21957 10.7429 9.99262 12.2204C11.3527 13.3254 12.359 12.8186 12.624 10.8786C12.9284 8.83392 11.4302 5.9313 9.72476 5.20175C8.42528 4.63154 8.26883 4.66031 7.84038 5.33376Z" fill="black"/>
+                <path d="M2.88193 16.7075C3.24136 18.9226 7.35405 23.0018 11.0101 24.7375C12.1376 25.3003 14.0826 25.7031 15.8021 25.7769C18.5025 25.8751 18.8859 25.7851 22.3741 24.1786C25.7215 22.637 26.2387 22.2689 27.844 20.4042C29.889 17.9907 31.8424 12.8058 31.2223 11.3601C30.6796 10.095 29.8918 10.7176 28.3133 13.8252C26.5656 17.2272 25.5918 18.4981 23.558 19.9541C21.6144 21.3254 17.9796 22.3934 15.6935 22.2776C12.9776 22.1433 7.87127 19.3874 5.0947 16.5541C3.68105 15.1275 2.64514 15.1717 2.88193 16.7075Z" fill="black"/>
+              </svg>
+              <span class="uppercase font-black pl-2 -translate-y-1">Bipradeep</span>
+            </div>
+
+            <img src={svgArrow.src} width="80" class="-translate-x-8" alt="arrow icon"/>
+          </div>
+
+          <div class="relative w-auto p-6 bg-[#FEFFF0]">
+						<img src={svgString.src} alt="string" class="absolute -top-6 -right-2 z-10 stroke-black w-10" />             
+
+						<div id="me" class="h-[300px] lg:h-[600px] border-2 border-black mx-auto"></div>
+						<Bars />
+					</div>
+        </div>
+
 			</div>
-			<div class="absolute top-[88vh] w-full">
+			<div class="hidden md:visible absolute top-[88vh] w-full">
 				<div class="group relative flex mx-auto items-center justify-center h-[7vh]">
 					<!-- <p class="tracking-wide text-xl mb-0 text-white align-middle">Scroll down</p>  -->
 					<div class="scroll-down-dude px-2" id="about"></div>
@@ -58,7 +109,7 @@ const py_stack =[
 			
 			<div class="flex-col my-2 font-normal text-2xl md:text-2xl text-center">
 				Hi there👋<br>welcome to my website !<br><br>
-				I'm <p class="py-0 inline-flex text-fuchsia-400 tracking-wide">Bipradeep</p> <br><br>
+				I'm <p class="py-0 inline-flex text-fuchsia-400 tracking-wide">Bipradeep Saha</p> <br><br>
 			</div>
 
 			<p class='font-normal tracking-wide text-xl text-justify'>
@@ -201,6 +252,13 @@ const py_stack =[
 			opacity: 1;
 		}
 	}
+
+	#me{
+     background-image: url('../../../assets/me.jpg');
+     background-position: bottom;
+     background-size: 120%;
+		 background-repeat: no-repeat;
+    }
 
 </style>
 
