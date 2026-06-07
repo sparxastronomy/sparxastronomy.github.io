@@ -1,23 +1,23 @@
 ---
 import Layout from '../../layouts/Page.astro';
 import { format } from "date-fns";
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 
 
 export async function getStaticPaths() {
 	const work = await getCollection('blog');
-	return work.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
+	return work.map((post) => ({
+		params: { slug: post.id },
+		props: post,
 	}));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const post = Astro.props;
+const { Content } = await render(post);
 
-const { title, description, publishDate, featuredImage, excerpt, tags } = entry.data;
-const canonicalURL: string = '/blog/' + entry.slug.toString();
+const { title, description, publishDate, featuredImage, excerpt, tags } = post.data;
+const canonicalURL: string = '/blog/' + post.id.toString();
 
 const seo = {
 	title,
@@ -56,7 +56,7 @@ const seo = {
 				<h1 class="font-emphasis heading-3 my-2 md:heading-2 sm:mb-5 sm:mt-3">{title}</h1>
 				<div class="code flex flex-wrap items-center justify-center gap-4 text-astro-gray-400 dark:text-astro-gray-200">
 					{
-						tags.map((tag) => {
+						tags.map((tag: unknown) => {
 							return (
 								<div class="flex items-center gap-2">
 									<span class="underline">{tag}</span>

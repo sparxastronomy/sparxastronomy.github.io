@@ -12,10 +12,10 @@ import type { CollectionEntry } from 'astro:content';
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	const allPosts = await getCollection("blog");
 	const sortedPosts = allPosts.sort(
-		(a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime(),
+		(a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => b.data.publishDate.getTime() - a.data.publishDate.getTime(),
 	);
 	// return sortedPosts.map((post) =>({
-	// 	params: { slug: post.slug },
+	// 	params: { slug: post.id },
 	// 	props: { post },
 	// }));
 
@@ -66,7 +66,7 @@ const seo = {
 					{
 						page.data.map((post, index) => (
 							<li class="py-5">
-								<PostBox url={'/blog/' +  post.slug} post={post} />
+								<PostBox url={'/blog/' +  post.id} post={post} />
 							</li>
 						))
 					}

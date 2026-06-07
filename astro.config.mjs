@@ -1,4 +1,6 @@
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
+
 
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
@@ -39,10 +41,18 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
-    mdx({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex,]
-    }),
+    mdx(
+      // Old remark and rehype plugins
+      // {
+      //   remarkPlugins: [remarkMath],
+      //   rehypePlugins: [rehypeKatex,]
+      // }
+
+      // ASTRO v6 unified plugins
+      {
+        processor: unified({ remarkPlugins: [remarkMath], rehypePlugins: [rehypeKatex] }),
+      }
+    ),
     icon(),
   ],
   prefetch: {
