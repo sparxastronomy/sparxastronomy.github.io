@@ -4,7 +4,7 @@ import { unified } from '@astrojs/markdown-remark';
 
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import fs from "node:fs"
 
 // remark math and rehype katex
@@ -36,11 +36,6 @@ export default defineConfig({
   },
   integrations: [
     sitemap(),
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
     mdx(
       // Old remark and rehype plugins
       // {
@@ -63,7 +58,8 @@ export default defineConfig({
   vite: {
     ssr: {
       external: ["svgo"]
-    }
+    },
+    plugins: [tailwindcss()],
   },
   output: "static",
   // adapter: netlify(),

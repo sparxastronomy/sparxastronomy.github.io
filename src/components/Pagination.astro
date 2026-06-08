@@ -91,12 +91,14 @@ const collapsedPages = collapseRange(page, pages);
 </nav>
 
 <style>
+	@reference "../styles/tailwind.css";
+
 	.next:hover,
 	.prev:hover {
 		background: linear-gradient(247.23deg, rgba(74, 242, 200, 0.2) 0%, rgba(47, 76, 179, 0.2) 100%);
 	}
 
-	@media screen(sm) {
+	@media (min-width: 640px) {
 		[aria-current='page']::before {
 			@apply absolute inset-0;
 			content: '';

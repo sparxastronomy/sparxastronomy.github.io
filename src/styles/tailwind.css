@@ -1,7 +1,6 @@
+@import "tailwindcss";
+@config "../../tailwind.config.cjs";
 @import "./prose.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* html {
 	scroll-behavior: smooth;
@@ -13,6 +12,15 @@
 }
 .prose{
 	max-width: 120ch;
+}
+
+@layer base {
+	b, strong {
+		font-weight: 700;
+	}
+	:focus-visible {
+		@apply outline-astro-pink-light outline-offset-2;
+	}
 }
 
 @layer components {

@@ -5,6 +5,8 @@ import Button from './button.astro';
 const {url, post} = Astro.props;
 ---
 <style>
+@reference "../../styles/tailwind.css";
+
 .post-box {
     position: relative;
     @apply rounded-[20px] border-0;

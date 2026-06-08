@@ -109,13 +109,6 @@ module.exports = {
 
 		plugin(function astroComponentsPlugin({ addComponents, theme }) {
 			addComponents({
-				"b, strong": {
-					fontWeight: 700,
-				},
-
-				":focus-visible": {
-					"@apply outline-astro-pink-light outline-offset-2": {},
-				},
 
 				".container": {
 					"@apply w-full mx-auto max-w-screen-2xl px-4 md:px-8": {},
@@ -130,11 +123,11 @@ module.exports = {
 					width: "100%",
 					rowGap: theme("spacing.24"),
 					paddingBottom: theme("spacing.24"),
-					"@media screen(md)": {
+					"@media (min-width: 768px)": {
 						rowGap: theme("spacing.32"),
 						paddingBottom: theme("spacing.32"),
 					},
-					"@media screen(lg)": {
+					"@media (min-width: 1024px)": {
 						rowGap: theme("spacing.20"),
 						paddingBottom: theme("spacing.20"),
 					},
